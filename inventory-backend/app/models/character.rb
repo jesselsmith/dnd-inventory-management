@@ -3,15 +3,18 @@ class Character < ApplicationRecord
   has_many :slots
 
   def max_slots
-    [this.strength*2, 9].max
+    [self.strength*2, 9].max
   end
 
-  def encumbered
-    [this.strength, 9].max
+  def encumbered_limit
+    [self.strength, 9].max
   end
 
-  def heavily_encumbered
-    [this.encumbered + 3, max_slots].min
+  def heavily_encumbered_limit
+    [self.encumbered + 3, max_slots].min
   end
   
+  def num_carried_items
+    self.slots.where("kind = ?", 'carried').length
+  end
 end

@@ -11,7 +11,7 @@ class Character < ApplicationRecord
   end
 
   def heavily_encumbered_limit
-    [self.encumbered + 3, max_slots].min
+    [self.encumbered_limit + 3, max_slots].min
   end
   
   def num_carried_items

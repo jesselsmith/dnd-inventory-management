@@ -2,9 +2,6 @@ class CharactersController < ApplicationController
   def index
     render json: CharacterSerializer.new(Character.all)
   end
-  def show
-
-  end
 
   def create
     character = Character.new(character_params(params))

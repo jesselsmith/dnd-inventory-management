@@ -17,4 +17,16 @@ class Character < ApplicationRecord
   def num_carried_items
     self.slots.where("kind = ?", 'carried').length
   end
+
+  def encumberance
+    if self.num_carried_items <= encumbered_limit
+      'Unencumbered'
+    elsif self.num_carried_items <= heavily_encumbered_limit
+      'Encumbered'
+    elsif self.num_carried_items <= max_slots
+      'Heavily Encumbered'
+    else
+      'Over the Limit'
+    end
+  end
 end

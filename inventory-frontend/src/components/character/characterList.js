@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import {fetchCharacters} from '../../actions/characterActions'
 
 class CharacterList extends Component {
+
+  componentDidMount = () => {
+    document.title = 'Character Inventory'
+    this.props.fetchCharacters()
+  }
+
 
   displayCharacterList = () => {
     if (this.props.loading) {
@@ -21,16 +29,17 @@ class CharacterList extends Component {
 
   render(){
     return(
-      <>
-        {this.displayCharacterList}
-      </>
+      <ul>
+        {this.displayCharacterList()}
+      </ul>
     )
   }
 }
 
 const mapStateToProps = state => ({
   characters: state.characters.characters,
-  loading: state.characters.charactersLoading
+  loading: state.characters.charactersLoading,
+
 })
 
-export default connect(mapStateToProps)(CharacterList)
+export default connect(mapStateToProps, {fetchCharacters})(CharacterList)

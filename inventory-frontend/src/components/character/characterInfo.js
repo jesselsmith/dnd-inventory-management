@@ -6,7 +6,7 @@ class CharacterInfo extends Component {
   render(){
     return(
       <>
-        <h2>{this.props.character.name}</h2>
+        <h2>{this.props.character.attributes.name}</h2>
         <div>Strength: {this.props.character.attributes.strength} <span className={this.props.character.attributes.encumberance}>{this.props.character.attributes.encumberance}</span></div>
       </>
     )

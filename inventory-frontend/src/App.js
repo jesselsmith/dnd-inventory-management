@@ -10,7 +10,9 @@ function App() {
   return (
     <Router>
       <>
-        <Route exact path="/" render={<CharacterList />} />
+        <Route exact path="/">
+          <CharacterList />
+        </Route>
       </>
     </Router>
   );

@@ -7,7 +7,7 @@ class CharacterPage extends Component {
   render(){
     return(
       <>
-        <CharacterInfo />
+        <CharacterInfo characterId={this.props.match.params.characterId } />
         <CharacterInventory />
       </>
     )

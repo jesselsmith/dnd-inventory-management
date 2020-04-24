@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom'
 import {fetchCharacters} from '../../actions/characterActions'
 
 class CharacterList extends Component {
-
-  componentDidMount = () => {
-    document.title = 'Character Inventory'
-    this.props.fetchCharacters()
-  }
-
-
   displayCharacterList = () => {
     if (this.props.loading) {
       return <h2>Characters loading...</h2>
@@ -38,8 +31,7 @@ class CharacterList extends Component {
 
 const mapStateToProps = state => ({
   characters: state.characters.characters,
-  loading: state.characters.charactersLoading,
-
+  loading: state.characters.loadingCharacters
 })
 
 export default connect(mapStateToProps, {fetchCharacters})(CharacterList)

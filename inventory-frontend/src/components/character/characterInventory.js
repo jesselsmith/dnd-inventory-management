@@ -9,9 +9,11 @@ class CharacterInventory extends Component {
   render(){
     return(
       <>
-        <WornInventory />
+        
+        Inventory
+        {/* <WornInventory />
         <CarriedInventory />
-        <ContainerInventory />
+        <ContainerInventory /> */}
       </>
     )
   }

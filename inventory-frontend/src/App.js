@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import CharacterList from "./components/character/characterList"
+import CharacterPage from "./components/character/characterPage"
 import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import { fetchCharacters } from './actions/characterActions'
+import { connect } from 'react-redux'
 
-function App() {
-  return (
-    <Router>
-      <>
-        <Route exact path="/">
-          <CharacterList />
-        </Route>
-      </>
-    </Router>
-  );
+class App extends Component {
+
+  componentDidMount = () => {
+    document.title = 'Character Inventory'
+    this.props.fetchCharacters()
+  }
+  render(){
+    return (
+      <Router>
+        <>
+          <Route exact path="/">
+            <CharacterList />
+          </Route>
+          <Route path="/characters/:characterId" render={routerProps => <CharacterPage {...routerProps} />} />
+        </>
+      </Router>
+    )
+  }
+  
 }
 
-export default App;
+export default connect(null, { fetchCharacters })(App)

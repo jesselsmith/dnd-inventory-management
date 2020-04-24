@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CharacterList from "./components/character/characterList"
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <Router>
+      <>
+        <Route exact path="/" render={<CharacterList />} />
+      </>
+    </Router>
   );
 }
 

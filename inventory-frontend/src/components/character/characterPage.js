@@ -4,14 +4,29 @@ import CharacterInfo from './characterInfo'
 import CharacterInventory from './characterInventory'
 
 class CharacterPage extends Component {
+  getCharacter = () => {  
+    return this.props.characters.find(character => character.id === this.props.match.params.characterId)
+  }
+
   render(){
-    return(
-      <>
-        <CharacterInfo characterId={this.props.match.params.characterId } />
-        <CharacterInventory />
-      </>
-    )
+    if(this.props.loading){
+      return <h2>Loading Character...</h2>
+    }else{
+      let character = this.getCharacter()
+      debugger
+      return(
+        <>
+          <CharacterInfo character={character} />
+          <CharacterInventory character={character} />
+        </>
+      )
+    }
   }
 }
 
-export default connect()(CharacterPage)
+const mapStateToProps = state => ({
+  characters: state.characters.characters,
+  loading: state.characters.loadingCharacters
+})
+
+export default connect(mapStateToProps)(CharacterPage)

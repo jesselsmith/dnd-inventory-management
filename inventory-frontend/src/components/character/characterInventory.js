@@ -11,8 +11,8 @@ class CharacterInventory extends Component {
       <>
         
         Inventory
-        {/* <WornInventory />
-        <CarriedInventory />
+        <WornInventory />
+        {/*<CarriedInventory />
         <ContainerInventory /> */}
       </>
     )

@@ -6,7 +6,6 @@ class CharacterInfo extends Component {
 
   render(){
     let character = this.props.character
-    debugger
     return(
       <>
         <h2>{character.attributes.name}</h2>

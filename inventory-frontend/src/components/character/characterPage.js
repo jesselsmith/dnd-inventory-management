@@ -13,7 +13,6 @@ class CharacterPage extends Component {
       return <h2>Loading Character...</h2>
     }else{
       let character = this.getCharacter()
-      debugger
       return(
         <>
           <CharacterInfo character={character} />

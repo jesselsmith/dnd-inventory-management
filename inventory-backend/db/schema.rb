@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_13_222240) do
+ActiveRecord::Schema.define(version: 2020_05_01_025752) do
 
   create_table "base_items", force: :cascade do |t|
     t.string "name", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_222240) do
     t.integer "owned_item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "location", default: 0, null: false
     t.index ["character_id"], name: "index_slots_on_character_id"
     t.index ["owned_item_id"], name: "index_slots_on_owned_item_id"
   end

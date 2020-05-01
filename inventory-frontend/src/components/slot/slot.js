@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 class Slot extends Component {
+  state = {
+    hasCard: false
+  }
   render(){
     return (
-      <div>
-        "Slot"
-      </div>
+      <span>
+         {this.props.location}
+      </span>
     )
   }
 }

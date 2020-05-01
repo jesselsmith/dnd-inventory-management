@@ -1,6 +1,10 @@
 class SlotsController < ApplicationController
   def index
-    render json: SlotSerializer.new(Slot.all)
+    if params[:character_id]
+      render json: SlotSerializer.new(Character.find(params[:character_id]).slots)
+    else
+      render json: SlotSerializer.new(Slot.all)
+    end
   end 
 
   def create

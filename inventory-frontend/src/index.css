@@ -29,6 +29,7 @@ code {
   text-align: center;
   width: 30vw;
   height: 41vw;
+  position: relative;
 }
 
 .heavy {
@@ -37,4 +38,19 @@ code {
 
 .encumbered {
   background-color: #f7f756;
+}
+
+.remove {
+  background-color: rgb(236, 22, 22);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notch .plus{
+  place-self: start end;
+}
+
+.notch .minus{
+  place-self: end end;
 }

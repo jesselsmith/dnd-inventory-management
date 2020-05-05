@@ -18,7 +18,7 @@ class SlotList extends Component {
     const slotArray = []
     for(let i = 0; i < this.props.numSlots; i++){
       let currSlot = this.props.slots.find(slot => slot.attributes.location === i)
-      slotArray.push(<span key={i}><Slot slot={currSlot} location={i} encumberance={this.getEncumberance(i)} /></span>)
+      slotArray.push(<span key={i}><Slot slot={currSlot} location={i + 1} encumberance={this.getEncumberance(i)} /></span>)
     }
     return slotArray
   }

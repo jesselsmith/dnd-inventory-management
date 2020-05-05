@@ -2,10 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import CharacterInfo from './characterInfo'
 import CharacterInventory from './characterInventory'
+import { fetchSlots } from '../../actions/slotActions'
 
 class CharacterPage extends Component {
   getCharacter = () => {  
     return this.props.characters.find(character => character.id === this.props.match.params.characterId)
+  }
+
+  componentDidMount = () => {
+    fetchSlots(this.props.match.params.characterId)
   }
 
   render(){

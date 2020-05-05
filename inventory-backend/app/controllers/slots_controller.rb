@@ -1,7 +1,7 @@
 class SlotsController < ApplicationController
   def index
     if params[:character_id]
-      render json: SlotSerializer.new(Character.find(params[:character_id]).slots)
+      render json: SlotSerializer.new(Character.find(params[:character_id]).orderedSlots)
     else
       render json: SlotSerializer.new(Slot.all)
     end
@@ -33,7 +33,7 @@ class SlotsController < ApplicationController
   private
 
   def slot_params(params)
-    params.require(:slot).permit(:kind, :character_id, :owned_item_id)
+    params.require(:slot).permit(:kind, :character_id, :owned_item_id, :location)
   end
 
   def render_slot

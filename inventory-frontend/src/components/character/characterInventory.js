@@ -7,16 +7,24 @@ import ContainerInventory from '../slot/containerInventory'
 
 class CharacterInventory extends Component {
   render(){
-    return(
-      <>
-        
-        Inventory
-        <WornInventory />
-        <CarriedInventory />
-        <ContainerInventory />
-      </>
-    )
+    if(this.props.loading){
+      return <h2>Loading Inventory...</h2>
+    }
+    else{
+      return(
+        <>
+          <h2>Inventory</h2>
+          <WornInventory />
+          <CarriedInventory />
+          <ContainerInventory />
+        </>
+      )
+    }
   }
 }
 
-export default connect()(CharacterInventory)
+const mapStateToProps = state => ({
+  loading: state.slots.loadingSlots
+})
+
+export default connect(mapStateToProps)(CharacterInventory)

@@ -29,4 +29,8 @@ class Character < ApplicationRecord
       'Over the Limit'
     end
   end
+
+  def orderedSlots
+    self.slots.order(:kind, :location)
+  end
 end

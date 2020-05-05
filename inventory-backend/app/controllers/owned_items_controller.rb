@@ -1,6 +1,10 @@
 class OwnedItemsController < ApplicationController
   def index
-    render json: OwnedItemSerializer.new(OwnedItem.all)
+    if params[:character_id]
+      render json: OwnedItemSerializer.new(Character.find(params[:character_id]).owned_items)
+    else
+      render json: OwnedItemSerializer.new(OwnedItem.all)
+    end
   end 
 
   def create

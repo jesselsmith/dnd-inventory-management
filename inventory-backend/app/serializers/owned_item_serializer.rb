@@ -1,6 +1,6 @@
 class OwnedItemSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :notches
+  attributes :notches, :base_item
   belongs_to :character
   belongs_to :base_item
 end

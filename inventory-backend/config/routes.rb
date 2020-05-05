@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :base_items, defaults: { format: :json }
   resources :characters, defaults: { format: :json } do
     resources :slots, defaults: { format: :json }
+    resources :owned_items, defaults: {format: :json }
   end
   resources :owned_items, defaults: { format: :json }
   resources :slots, defaults: { format: :json }

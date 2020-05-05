@@ -14,8 +14,10 @@ class CharacterInventory extends Component {
       return(
         <>
           <h2>Inventory</h2>
-          <WornInventory />
-          <CarriedInventory />
+          <WornInventory strength={this.props.character.attributes.strength} />
+          <CarriedInventory encumbered={this.props.character.attributes.encumbered_limit} 
+            heavilyEncumbered={this.props.character.attributes.heavily_encumbered_limit} 
+            maxSlots={this.props.character.attributes.max_slots} />
           <ContainerInventory />
         </>
       )
@@ -24,7 +26,7 @@ class CharacterInventory extends Component {
 }
 
 const mapStateToProps = state => ({
-  loading: state.slots.loadingSlots
+  loading: state.slots.loadingSlots || state.ownedItems.loadingOwnedItems
 })
 
 export default connect(mapStateToProps)(CharacterInventory)

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import CharacterInfo from './characterInfo'
 import CharacterInventory from './characterInventory'
 import { fetchSlots } from '../../actions/slotActions'
+import { fetchOwnedItems} from '../../actions/ownedItemActions'
 
 class CharacterPage extends Component {
   getCharacter = () => {  
@@ -10,7 +11,8 @@ class CharacterPage extends Component {
   }
 
   componentDidMount = () => {
-    fetchSlots(this.props.match.params.characterId)
+    this.props.fetchSlots(this.props.match.params.characterId)
+    this.props.fetchOwnedItems(this.props.match.params.characterId)
   }
 
   render(){
@@ -33,4 +35,4 @@ const mapStateToProps = state => ({
   loading: state.characters.loadingCharacters
 })
 
-export default connect(mapStateToProps)(CharacterPage)
+export default connect(mapStateToProps, { fetchSlots, fetchOwnedItems })(CharacterPage)

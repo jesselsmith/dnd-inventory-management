@@ -13,14 +13,28 @@ code {
 }
 
 .inventory {
-  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 7px;
+  align-items: center;
+  justify-items: center;
 }
 
-.inventory td {
+.inventory-item {
+  display: inline-grid;
   border: 2px;
   border-color: black;
   border-style: solid;
+  align-items: center;
   text-align: center;
   width: 30vw;
   height: 41vw;
+}
+
+.heavy {
+  background-color: rgb(241, 83, 83);
+}
+
+.encumbered {
+  background-color: #f7f756;
 }

@@ -4,7 +4,8 @@ import CharacterInfo from './characterInfo'
 import CharacterInventory from './characterInventory'
 import { fetchSlots } from '../../actions/slotActions'
 import { fetchOwnedItems} from '../../actions/ownedItemActions'
-import BaseItemsList from '../item/baseItem/baseItemsList'
+import { setActiveCharacter } from '../../actions/characterActions'
+import BaseItemSidebar from '../item/baseItem/baseItemSidebar'
 
 class CharacterPage extends Component {
   getCharacter = () => {  
@@ -14,6 +15,13 @@ class CharacterPage extends Component {
   componentDidMount = () => {
     this.props.fetchSlots(this.props.match.params.characterId)
     this.props.fetchOwnedItems(this.props.match.params.characterId)
+    this.props.setActiveCharacter(this.props.match.params.characterId)
+  }
+
+  showItemList = () => {
+    if(this.props.showItemList){
+      return <BaseItemSidebar />
+    }
   }
 
   render(){
@@ -25,7 +33,7 @@ class CharacterPage extends Component {
         <>
           <CharacterInfo character={character} />
           <CharacterInventory character={character} />
-          <BaseItemsList />
+          {this.showSideBar()}
         </>
       )
     }
@@ -34,7 +42,8 @@ class CharacterPage extends Component {
 
 const mapStateToProps = state => ({
   characters: state.characters.characters,
-  loading: state.characters.loadingCharacters
+  loading: state.characters.loadingCharacters,
+  showItemList: state.baseItems.showItemList
 })
 
-export default connect(mapStateToProps, { fetchSlots, fetchOwnedItems })(CharacterPage)
+export default connect(mapStateToProps, { fetchSlots, fetchOwnedItems, setActiveCharacter })(CharacterPage)

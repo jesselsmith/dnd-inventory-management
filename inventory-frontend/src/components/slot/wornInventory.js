@@ -7,15 +7,15 @@ const wornInventory = props => {
     <div>
       Worn Inventory
       <div className="inventory">
-        <Slot location="Bandolier 1"/>
-        <Slot location="Head"/>
-        <Slot location="Bandolier 2"/>
-        <Slot location="Left Hand"/>
-        <Slot location="Torso"/>
-        <Slot location="Right Hand"/>
-        <Slot location="Bandolier 3"/>
-        <Slot location="Legs"/>
-        <Slot location="Bandolier 4"/>
+        <Slot location="Bandolier 1" slotType="worn"/>
+        <Slot location="Head" slotType="worn"/>
+        <Slot location="Bandolier 2" slotType="worn"/>
+        <Slot location="Left Hand" slotType="worn"/>
+        <Slot location="Torso" slotType="worn"/>
+        <Slot location="Right Hand" slotType="worn"/>
+        <Slot location="Bandolier 3" slotType="worn"/>
+        <Slot location="Legs" slotType="worn"/>
+        <Slot location="Bandolier 4" slotType="worn"/>
       </div>
     </div>
   )

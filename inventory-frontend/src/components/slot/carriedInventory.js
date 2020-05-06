@@ -8,7 +8,13 @@ const carriedInventory = props => {
   return (
     <div>
       "Carried Inventory"
-      <SlotList slots={carriedSlots} numSlots={props.maxSlots} encumbered={props.encumbered} heavilyEncumbered={props.heavilyEncumbered} />
+      <SlotList 
+        slots={carriedSlots} 
+        numSlots={props.maxSlots} 
+        encumbered={props.encumbered} 
+        heavilyEncumbered={props.heavilyEncumbered}
+        slotType="carried"
+      />
     </div>
   )
 }

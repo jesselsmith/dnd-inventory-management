@@ -8,7 +8,7 @@ const updateModel = (modelArray, updatedModel) => {
   })
 }
 
-export default (state = { characters: [], loadingCharacters: true }, action) => {
+export default (state = { characters: [], activeCharacter: null, loadingCharacters: true }, action) => {
   switch (action.type) {
     case 'SET_CHARACTERS':
       return {
@@ -27,6 +27,8 @@ export default (state = { characters: [], loadingCharacters: true }, action) => 
         characters: state.characters.filter(character => character.id !== action.characterId),
         loadingCharacters: false
       }
+    case 'SET_ACTIVE_CHARACTER':
+      return{ ...state, activeCharacter: action.characterId }
     default:
       return state
   }

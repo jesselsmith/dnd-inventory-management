@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 class BaseItemList extends Component {
   displayBaseItems = () => {
-    this.props.baseItems.map(baseItem => {
-      return <BaseItem item={baseItem} />
+    this.props.baseItems.map((baseItem, index) => {
+      return <BaseItem key={index} item={baseItem} />
     })
   }
 

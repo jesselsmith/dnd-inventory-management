@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import OwnedItem from '../item/ownedItem/ownedItem'
-import { showItemSidebar } from '../../actions/baseItemActions'
+import { showItemList } from '../../actions/baseItemActions'
 
 class Slot extends Component {
   
@@ -52,7 +52,7 @@ class Slot extends Component {
   }
 
   handleAddItem = () => {
-
+    this.props.showItemList(this.props.characterId, this.props.slotType, this.props.location)
   }
 
   handleRemoveItem = () => {
@@ -84,4 +84,8 @@ class Slot extends Component {
   }
 }
 
-export default connect(null, { showItemSidebar })(Slot)
+const mapStateToProps = state => ({
+  characterId: state.characters.activeCharacter
+})
+
+export default connect(mapStateToProps, { showItemList })(Slot)

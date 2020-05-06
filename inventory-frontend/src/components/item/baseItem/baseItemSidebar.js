@@ -6,10 +6,10 @@ class BaseItemSidebar extends Component {
 
   render(){
     return(
-      <>
+      <div className="item-sidebar">
         <BaseItemSearch />
         <BaseItemsList />
-      </>
+      </div>
     )
   }
 }

@@ -9,3 +9,7 @@ export const fetchCharacters = () => {
       })
   }
 }
+
+export const setActiveCharacter = characterId => {
+  dispatch({type:"SET_ACTIVE_CHARACTER", characterId: characterId })
+}

@@ -18,24 +18,31 @@ class CharacterPage extends Component {
     this.props.setActiveCharacter(this.props.match.params.characterId)
   }
 
-  showItemList = () => {
-    if(this.props.showItemList){
-      return <BaseItemSidebar />
-    }
-  }
-
   render(){
     if(this.props.loading){
       return <h2>Loading Character...</h2>
     }else{
       let character = this.getCharacter()
-      return(
-        <>
-          <CharacterInfo character={character} />
-          <CharacterInventory character={character} />
-          {this.showSideBar()}
+      if(this.props.showItemList){
+        return(
+          <>
+          <div className="main margin">
+            <CharacterInfo character={character} />
+            <CharacterInventory character={character} />
+          </div>
+          <BaseItemSidebar />
         </>
-      )
+        )
+      }else{
+        return(
+          <>
+            <div className="main">
+              <CharacterInfo character={character} />
+              <CharacterInventory character={character} />
+            </div>
+          </>
+        )
+      }
     }
   }
 }

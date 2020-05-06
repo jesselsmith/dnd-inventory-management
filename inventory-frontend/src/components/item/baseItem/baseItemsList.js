@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import BaseItem from './baseItem'
 import { connect } from 'react-redux';
 
-class BaseItemList extends Component {
+class BaseItemsList extends Component {
   displayBaseItems = () => {
-    this.props.baseItems.map((baseItem, index) => {
-      return <BaseItem key={index} item={baseItem} />
+    return this.props.baseItems.map((baseItem, index) => {
+      return (<div key={index}><BaseItem item={baseItem} /></div>)
     })
   }
 
@@ -22,4 +22,4 @@ const mapStateToProps = state => ({
   baseItems: state.baseItems.baseItems
 })
 
-export default connect(mapStateToProps)(BaseItemList)
+export default connect(mapStateToProps)(BaseItemsList)

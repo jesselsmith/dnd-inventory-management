@@ -3,7 +3,7 @@ const BASE_URL = 'http://localhost:3001/'
 export const fetchBaseItems = characterId => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_BASE_ITEMS' })
-    fetch(`${BASE_URL}/characters/${characterId}/base_items`).then(resp => resp.json())
+    fetch(`${BASE_URL}base_items`).then(resp => resp.json())
       .then(json => {
         dispatch({ type: 'SET_BASE_ITEMS', baseItems: json.data })
       })
@@ -33,7 +33,7 @@ export const postBaseItem = baseItem => {
 
 export const patchBaseItem = baseItem => {
   return dispatch => {
-    fetch(`${BASE_URL}Base_items/${BaseItem.id}`, optionMaker(baseItem, 'PATCH')).then(resp => resp.json())
+    fetch(`${BASE_URL}base_items/${baseItem.id}`, optionMaker(baseItem, 'PATCH')).then(resp => resp.json())
     .then(json => {
       dispatch({ type: 'UPDATE_BASE_ITEM', baseItem: json.data })
     })

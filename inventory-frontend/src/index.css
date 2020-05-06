@@ -81,3 +81,13 @@ code {
 
   font-size: large;
 }
+.main .margin {
+  margin-right: 25%;
+}
+.item-sidebar {
+  position: fixed!;
+  width: 25%;
+  display: block;
+  right: 0;
+  top: 0;
+}

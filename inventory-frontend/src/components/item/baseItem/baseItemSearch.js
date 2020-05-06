@@ -5,6 +5,9 @@ class BaseItemSearch extends Component {
   render(){
     return(
       <>
+        <form>
+          <input type="text" />
+        </form>
       </>
     )
   }

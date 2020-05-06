@@ -7,6 +7,7 @@ import {
   Route
 } from 'react-router-dom';
 import { fetchCharacters } from './actions/characterActions'
+import { fetchBaseItems } from './actions/baseItemActions'
 import { connect } from 'react-redux'
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
   componentDidMount = () => {
     document.title = 'Character Inventory'
     this.props.fetchCharacters()
+    this.props.fetchBaseItems()
   }
   render(){
     return (
@@ -30,4 +32,4 @@ class App extends Component {
   
 }
 
-export default connect(null, { fetchCharacters })(App)
+export default connect(null, { fetchCharacters, fetchBaseItems })(App)

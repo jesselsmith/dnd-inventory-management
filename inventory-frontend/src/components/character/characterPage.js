@@ -4,6 +4,7 @@ import CharacterInfo from './characterInfo'
 import CharacterInventory from './characterInventory'
 import { fetchSlots } from '../../actions/slotActions'
 import { fetchOwnedItems} from '../../actions/ownedItemActions'
+import BaseItemsList from '../item/baseItem/baseItemsList'
 
 class CharacterPage extends Component {
   getCharacter = () => {  
@@ -24,6 +25,7 @@ class CharacterPage extends Component {
         <>
           <CharacterInfo character={character} />
           <CharacterInventory character={character} />
+          <BaseItemsList />
         </>
       )
     }

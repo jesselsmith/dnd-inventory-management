@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import OwnedItem from '../item/ownedItem/ownedItem'
+import { showItemSidebar } from '../../actions/baseItemActions'
 
 class Slot extends Component {
   
@@ -38,16 +39,24 @@ class Slot extends Component {
   showButtons = () => {
     const buttons = []
     if(this.state.showRemove){
-      buttons.push(<button className="remove" key="0">Remove Item</button>)
+      buttons.push(<button className="remove" key="0" onClick={this.handleRemoveItem}>Remove Item</button>)
     }
     if(this.state.showAdd){
-      buttons.push(<button className="add" key='3'>Add Item</button>)
+      buttons.push(<button className="add" key='1' onClick={this.handleAddItem}>Add Item</button>)
     }
     if(this.state.showChargeButtons){
-      buttons.push(<button className="charge plus" key='4'>+</button>)
-      buttons.push(<button className="charge minus" key='5'>-</button>)
+      buttons.push(<button className="charge plus" key='2'>+</button>)
+      buttons.push(<button className="charge minus" key='3'>-</button>)
     }
     return buttons
+  }
+
+  handleAddItem = () => {
+
+  }
+
+  handleRemoveItem = () => {
+
   }
 
   render(){
@@ -75,4 +84,4 @@ class Slot extends Component {
   }
 }
 
-export default Slot
+export default connect(null, { showItemSidebar })(Slot)

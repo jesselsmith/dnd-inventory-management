@@ -45,12 +45,39 @@ code {
   position: absolute;
   top: 0;
   right: 0;
+  font-size: 1em;
 }
 
-.notch .plus{
-  place-self: start end;
+.notches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+  "a a a a b b"
+  "a a a a b b"
+  "a a a a c c"
+  "a a a a c c";
+  justify-items: stretch;
 }
 
-.notch .minus{
-  place-self: end end;
+.notch-text {
+  grid-area: a;
+  align-self: center;
+}
+
+.notch-btns {
+  font-size: .5em;
+}
+
+.notch-btns .plus{
+  grid-area: b;
+}
+
+.notch-btns .minus{
+  grid-area: c;
+}
+
+.add {
+  place-self: start center;
+
+  font-size: large;
 }

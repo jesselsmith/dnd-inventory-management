@@ -38,7 +38,7 @@ class OwnedItemsController < ApplicationController
 
   def render_owned_item
     @owned_item = find_owned_item
-    @options = { include: [:monsters, :players] }
+    @options = {}
     if @owned_item
       yield
       render json: OwnedItemSerializer.new(@owned_item, @options)

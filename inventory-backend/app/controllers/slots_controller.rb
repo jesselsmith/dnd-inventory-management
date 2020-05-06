@@ -38,7 +38,7 @@ class SlotsController < ApplicationController
 
   def render_slot
     @slot = find_slot
-    @options = { include: [:slots, :owned_items] }
+    @options = { include: [:owned_items] }
     if @slot
       yield
       render json: SlotSerializer.new(@slot, @options)

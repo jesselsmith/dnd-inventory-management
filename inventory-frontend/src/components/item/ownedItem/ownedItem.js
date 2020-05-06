@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { patchOwnedItem } from '../../../actions/ownedItemActions'
 
 class OwnedItem extends Component {
   state = {
@@ -25,10 +26,26 @@ class OwnedItem extends Component {
   showNotchButtons = () => {
     let buttons  = []
     if(this.state.showNotchButtons){
-      buttons.push(<button className="notch plus" key="1">+</button>)
-      buttons.push(<button className="notch minus" key='2'>-</button>)
+      buttons.push(<button className="plus" key="1" onClick={this.handleNotchIncrease}>+</button>)
+      buttons.push(<button className="minus" key='2' onClick={this.handleNotchDecrease}>-</button>)
     }
     return buttons
+  }
+
+  handleNotchIncrease = () => {
+    let item = this.getItem()
+    this.props.patchOwnedItem({
+      id: this.props.itemId,
+      notches: item.attributes.notches + 1
+    })
+  }
+
+  handleNotchDecrease = () => {
+    let item = this.getItem()
+    this.props.patchOwnedItem({
+      id: this.props.itemId,
+      notches: item.attributes.notches - 1
+    })
   }
 
   render(){
@@ -36,8 +53,11 @@ class OwnedItem extends Component {
     let baseItem = item.attributes.base_item
     return(
       <><h3>Name: {baseItem.name} </h3>
-      <span className="notches" onMouseEnter={this.handleMouseEnter} 
-        onMouseLeave={this.handleMouseLeave}>Notches: {item.attributes.notches} {this.showNotchButtons()}</span>
+      <div className="notches" onMouseEnter={this.handleMouseEnter} 
+        onMouseLeave={this.handleMouseLeave}>
+        <span className="notch-text">Notches: {item.attributes.notches}</span>
+        <span className="notch-btns">{this.showNotchButtons()}</span>
+      </div>
       </>
     )  
   }
@@ -47,4 +67,4 @@ const mapStateToProps = state => ({
   ownedItems: state.ownedItems.ownedItems
 })
 
-export default connect(mapStateToProps)(OwnedItem)
+export default connect(mapStateToProps, { patchOwnedItem })(OwnedItem)

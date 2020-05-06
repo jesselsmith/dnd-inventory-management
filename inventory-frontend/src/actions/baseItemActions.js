@@ -39,3 +39,9 @@ export const patchBaseItem = baseItem => {
     })
   }
 }
+
+export const showItemList = (characterId, slotType, location) => {
+  return dispatch => {
+    dispatch({ type: 'SHOW_ITEM_LIST', characterId: characterId, slotType: slotType, location: location })
+  }
+}

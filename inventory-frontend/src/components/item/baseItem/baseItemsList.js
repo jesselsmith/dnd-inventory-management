@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import BaseItem from './baseItem'
 import { connect } from 'react-redux';
-import BaseItemSearch from './baseItemSearch'
 
 class BaseItemList extends Component {
   displayBaseItems = () => {
@@ -13,7 +12,6 @@ class BaseItemList extends Component {
   render(){
     return(
       <>
-        <BaseItemSearch />
         {this.displayBaseItems()}
       </>
     )

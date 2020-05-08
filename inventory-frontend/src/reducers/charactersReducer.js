@@ -13,7 +13,8 @@ export default (state = { characters: [], activeCharacter: null, loadingCharacte
     case 'SET_CHARACTERS':
       return {
         characters: action.characters,
-        loadingCharacters: false
+        loadingCharacters: false,
+        activeCharacter: null
       }
     case 'ADD_CHARACTER':
       return { ...state, encounters: [...state.characters, action.character], loadingCharacters: false }
@@ -28,7 +29,7 @@ export default (state = { characters: [], activeCharacter: null, loadingCharacte
         loadingCharacters: false
       }
     case 'SET_ACTIVE_CHARACTER':
-      return{ ...state, activeCharacter: action.characterId }
+      return { ...state, activeCharacter: action.characterId }
     default:
       return state
   }

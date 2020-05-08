@@ -6,6 +6,10 @@ import { hideItemList } from '../../../actions/baseItemActions'
 
 class BaseItemSidebar extends Component {
 
+  state={
+    selectedItem: null
+  }
+
   handleAdd = () => {
 
   }
@@ -14,12 +18,18 @@ class BaseItemSidebar extends Component {
     this.props.hideItemList()
   }
 
+  selectItem = item => {
+    this.setState({
+      selectedItem: item
+    })
+  }
+
   render(){
     return(
       <div className="item-sidebar">
         <h3>Add Item</h3>
         <BaseItemSearch />
-        <BaseItemsList />
+        <BaseItemsList selectItem={this.selectItem} />
         <button onClick={this.handleCancel} >Cancel</button>
         <button onClick={this.handleAdd} >Add Item</button>
       </div>

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 class BaseItemsList extends Component {
   displayBaseItems = () => {
     return this.props.baseItems.map((baseItem, index) => {
-      return (<div key={index}><BaseItem item={baseItem} /></div>)
+      return (<div key={index}><BaseItem item={baseItem} selectItem={this.props.selectItem} /></div>)
     })
   }
 

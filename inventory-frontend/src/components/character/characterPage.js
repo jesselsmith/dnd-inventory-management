@@ -8,7 +8,8 @@ import { setActiveCharacter } from '../../actions/characterActions'
 import BaseItemSidebar from '../item/baseItem/baseItemSidebar'
 
 class CharacterPage extends Component {
-  getCharacter = () => {  
+  getCharacter = () => { 
+    this.props.setActiveCharacter(this.props.match.params.characterId)
     return this.props.characters.find(character => character.id === this.props.match.params.characterId)
   }
 

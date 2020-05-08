@@ -45,3 +45,9 @@ export const showItemList = (characterId, slotType, location) => {
     dispatch({ type: 'SHOW_ITEM_LIST', characterId: characterId, slotType: slotType, location: location })
   }
 }
+
+export const hideItemList = () => {
+  return dispatch => {
+    dispatch({ type: 'HIDE_ITEM_LIST' })
+  }
+}

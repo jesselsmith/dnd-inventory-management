@@ -14,7 +14,7 @@ code {
 
 .inventory {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 7px;
   align-items: center;
   justify-items: center;
@@ -30,6 +30,11 @@ code {
   width: 30vw;
   height: 41vw;
   position: relative;
+}
+
+.margin .inventory-item {
+  width: 20vw;
+  height: 27vw;
 }
 
 .heavy {
@@ -68,11 +73,11 @@ code {
   font-size: .5em;
 }
 
-.notch-btns .plus{
+.notch-btns.plus{
   grid-area: b;
 }
 
-.notch-btns .minus{
+.notch-btns.minus{
   grid-area: c;
 }
 
@@ -81,13 +86,13 @@ code {
 
   font-size: large;
 }
-.main .margin {
+.margin {
   margin-right: 25%;
+  float: left;
 }
 .item-sidebar {
-  position: fixed!;
-  width: 25%;
+  width: 35%;
   display: block;
+  position: fixed;
   right: 0;
-  top: 0;
 }

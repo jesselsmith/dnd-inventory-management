@@ -26,12 +26,12 @@ class CharacterPage extends Component {
       if(this.props.showItemList){
         return(
           <>
-          <div className="main margin">
-            <CharacterInfo character={character} />
-            <CharacterInventory character={character} />
-          </div>
-          <BaseItemSidebar />
-        </>
+            <div className="main margin">
+              <CharacterInfo character={character} />
+              <CharacterInventory character={character} />
+            </div>
+            <BaseItemSidebar />
+          </>
         )
       }else{
         return(

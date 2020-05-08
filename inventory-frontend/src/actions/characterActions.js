@@ -13,5 +13,6 @@ export const fetchCharacters = () => {
 export const setActiveCharacter = characterId => {
   return (dispatch) => {
     dispatch({type:"SET_ACTIVE_CHARACTER", characterId: characterId })
+    dispatch({ type: "CLEAR_SELECTED_SLOT" })
   }
 }

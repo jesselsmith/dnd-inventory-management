@@ -8,7 +8,7 @@ const updateModel = (modelArray, updatedModel) => {
   })
 }
 
-export default (state = { baseItems: [], loadingBaseItems: true, showItemList: false, slotToAdd: {} }, action) => {
+export default (state = { baseItems: [], loadingBaseItems: true, showItemList: false }, action) => {
   switch (action.type) {
     case 'SET_BASE_ITEMS':
       return {
@@ -28,9 +28,9 @@ export default (state = { baseItems: [], loadingBaseItems: true, showItemList: f
         loadingBaseItems: false
       }
     case 'SHOW_ITEM_LIST':
-      return { ...state, showItemList: true, slotToAdd: { characterId: action.characterId, kind: action.slotType, location: action.location } }
+      return { ...state, showItemList: true }
     case 'HIDE_ITEM_LIST':
-      return { ...state, showItemList: false, slotToAdd: {} } 
+      return { ...state, showItemList: false } 
     default:
       return state
   }

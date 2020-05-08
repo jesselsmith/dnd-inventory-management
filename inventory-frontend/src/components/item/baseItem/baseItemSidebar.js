@@ -7,7 +7,11 @@ import { hideItemList } from '../../../actions/baseItemActions'
 class BaseItemSidebar extends Component {
 
   handleAdd = () => {
-    
+
+  }
+
+  handleCancel = () => {
+    this.props.hideItemList()
   }
 
   render(){
@@ -16,11 +20,16 @@ class BaseItemSidebar extends Component {
         <h3>Add Item</h3>
         <BaseItemSearch />
         <BaseItemsList />
-        <button onClick={ () => this.props.hideItemList() } >Cancel</button>
-        <button onClick={this.handleAdd()} >Add Item</button>
+        <button onClick={this.handleCancel} >Cancel</button>
+        <button onClick={this.handleAdd} >Add Item</button>
       </div>
     )
   }
 }
 
-export default connect(null, { hideItemList })(BaseItemSidebar)
+const mapStateToProps = state => ({
+  activeCharacter: state.characters.activeCharacter,
+  selectedSlot: state.slots.selectedSlot
+})
+
+export default connect(mapStateToProps, { hideItemList })(BaseItemSidebar)

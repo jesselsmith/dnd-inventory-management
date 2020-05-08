@@ -9,3 +9,9 @@ export const fetchSlots = characterId => {
       })
   }
 }
+
+export const setSelectedSlot = (kind, location) => {
+  return (dispatch) => {
+    dispatch({ type: 'SET_SELECTED_SLOT', kind: kind, location: location })
+  }
+}

@@ -40,14 +40,15 @@ export const patchBaseItem = baseItem => {
   }
 }
 
-export const showItemList = (characterId, slotType, location) => {
+export const showItemList = () => {
   return dispatch => {
-    dispatch({ type: 'SHOW_ITEM_LIST', characterId: characterId, slotType: slotType, location: location })
+    dispatch({ type: 'SHOW_ITEM_LIST' })
   }
 }
 
 export const hideItemList = () => {
   return dispatch => {
     dispatch({ type: 'HIDE_ITEM_LIST' })
+    dispatch({ type: 'CLEAR_SELECTED_SLOT' })
   }
 }

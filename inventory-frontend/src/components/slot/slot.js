@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import OwnedItem from '../item/ownedItem/ownedItem'
 import { showItemList } from '../../actions/baseItemActions'
+import { setSelectedSlot } from '../../actions/slotActions'
 
 class Slot extends Component {
   
   state = {
     showRemove: false,
     showAdd: false,
-    showChargeButtons: false
+    showChargeButtons: false,
+    showSelected: false
   }
   
   handleMouseEnter = event => {
@@ -51,18 +53,34 @@ class Slot extends Component {
     return buttons
   }
 
-  handleAddItem = () => {
-    this.props.showItemList(this.props.characterId, this.props.slotType, this.props.location)
+  handleAddItem = event => {
+    this.props.showItemList()
+    this.props.setSelectedSlot(this.props.slotType, this.props.location)
+    setTimeout(() => { document.getElementById(this.id()).scrollIntoView() }, 1)
   }
 
   handleRemoveItem = () => {
 
   }
 
+  className = () => {
+    let className = `inventory-item ${this.props.encumberance}`
+
+    if(this.props.selectedSlot && this.props.slotType === this.props.selectedSlot.kind && 
+      this.props.location === this.props.selectedSlot.location){
+        className += ` selected`
+      }
+    return className
+  }
+
+  id = () => {
+    return `${this.props.slotType}-${this.props.location}`
+  }
+
   render(){
     if(Boolean(this.props.slot)){
       return (
-        <div className={"inventory-item " + this.props.encumberance} 
+        <div className={this.className()} 
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
         >
@@ -72,7 +90,7 @@ class Slot extends Component {
       )
     }else{
       return (
-        <div className={"inventory-item " + this.props.encumberance} 
+        <div className={this.className()} id={this.id()}
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
         >
@@ -85,7 +103,8 @@ class Slot extends Component {
 }
 
 const mapStateToProps = state => ({
-  characterId: state.characters.activeCharacter
+  characterId: state.characters.activeCharacter,
+  selectedSlot: state.slots.selectedSlot
 })
 
-export default connect(mapStateToProps, { showItemList })(Slot)
+export default connect(mapStateToProps, { showItemList, setSelectedSlot })(Slot)

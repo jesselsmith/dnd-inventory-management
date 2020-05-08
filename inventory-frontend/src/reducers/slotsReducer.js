@@ -8,7 +8,7 @@ const updateModel = (modelArray, updatedModel) => {
   })
 }
 
-export default (state = { slots: [], loadingSlots: true }, action) => {
+export default (state = { slots: [], loadingSlots: true, selectedSlot: {} }, action) => {
   switch (action.type) {
     case 'SET_SLOTS':
       return {
@@ -26,6 +26,16 @@ export default (state = { slots: [], loadingSlots: true }, action) => {
         ...state,
         slots: state.slots.filter(slot => slot.id !== action.slotId),
         loadingSlots: false
+      }
+    case 'SET_SELECTED_SLOT':
+      return {
+        ...state,
+        selectedSlot: { kind: action.kind, location: action.location }
+      }
+    case 'CLEAR_SELECTED_SLOT':
+      return {
+        ...state,
+        selectedSlot: {}
       }
     default:
       return state

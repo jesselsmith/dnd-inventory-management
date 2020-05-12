@@ -10,8 +10,40 @@ export const fetchSlots = characterId => {
   }
 }
 
+const optionMaker = (model, method = 'POST') => {
+  return {
+    method: method,
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(model)
+  }
+}
+
 export const setSelectedSlot = (kind, location) => {
   return (dispatch) => {
     dispatch({ type: 'SET_SELECTED_SLOT', kind: kind, location: location })
+  }
+}
+
+export const postSlot = slot => {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_SLOTS' })
+    fetch(BASE_URL + 'slots', optionMaker(slot)).then(resp => resp.json())
+      .then(json => {
+        debugger
+        dispatch({ type: 'ADD_OWNED_ITEM', ownedItem: json.included[0] })
+        dispatch({ type: 'ADD_SLOT', slot: json.data })
+      })
+  }
+}
+
+export const patchSlot = slot => {
+  return dispatch => {
+    fetch(`${BASE_URL}slots/${slot.id}`, optionMaker(slot, 'PATCH')).then(resp => resp.json())
+    .then(json => {
+      dispatch({ type: 'UPDATE_SLOT', slot: json.data })
+    })
   }
 }

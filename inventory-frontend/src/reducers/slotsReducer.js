@@ -16,7 +16,7 @@ export default (state = { slots: [], loadingSlots: true, selectedSlot: {} }, act
         loadingSlots: false
       }
     case 'ADD_SLOT':
-      return { ...state, encounters: [...state.slots, action.slot], loadingSlots: false }
+      return { ...state, slots: [...state.slots, action.slot], loadingSlots: false }
     case 'LOADING_SLOTS':
       return {...state, loadingSlots: true }
     case 'UPDATE_SLOT':

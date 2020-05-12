@@ -112,11 +112,19 @@ code {
   animation-duration: 300ms;
 }
 
+.base-item {
+  width: 100%;
+}
+
 .selected {
   border: 10px solid rgb(0, 225, 255);
   background-color: rgb(227, 252, 255);
   animation-name: selectedSlot;
   animation-duration: 400ms;
+}
+
+.selected-item {
+  background-color:  rgb(0, 225, 255);
 }
 
 .no-margin {

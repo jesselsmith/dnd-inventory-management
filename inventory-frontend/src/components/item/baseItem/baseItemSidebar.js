@@ -10,7 +10,8 @@ class BaseItemSidebar extends Component {
 
 
   handleAdd = () => {
-    this.props.postSlot({ kind: this.props.selectedSlot.kind, location: this.props.selectedSlot.location, base_item_id: this.props.selectedItem.id, character_id: this.props.activeCharacter })
+    this.props.postSlot({slot: { kind: this.props.selectedSlot.kind, location: this.props.selectedSlot.location - 1, base_item_id: this.props.selectedItem.id, character_id: this.props.activeCharacter} })
+    this.scrollToElement(this.selectedSlotElement())
     this.props.hideItemList()
   }
 
@@ -32,7 +33,7 @@ class BaseItemSidebar extends Component {
       <div className="item-sidebar">
         <h3>Add Item</h3>
         <BaseItemSearch />
-        <BaseItemsList selectedItem={this.props.selectedItem} />
+        <BaseItemsList />
         <button onClick={this.handleCancel} >Cancel</button>
         <button onClick={this.handleAdd} >Add Item</button>
       </div>

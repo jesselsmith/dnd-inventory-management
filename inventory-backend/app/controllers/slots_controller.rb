@@ -15,12 +15,12 @@ class SlotsController < ApplicationController
       if item.save
         parameters[:owned_item_id] = item.id
       end
-      delete parameters[:base_item_id]
+      parameters = parameters.except(:base_item_id)
     end
 
     slot = Slot.new(parameters)
     if slot.save
-      render json: SlotSerializer.new(slot)
+      render json: SlotSerializer.new(slot, { include: [:owned_item] })
     else
       render json: { message: 'There was an error in slot creation' }
     end
@@ -48,7 +48,7 @@ class SlotsController < ApplicationController
 
   def render_slot
     @slot = find_slot
-    @options = { include: [:owned_items] }
+    @options = { include: [:owned_item] }
     if @slot
       yield
       render json: SlotSerializer.new(@slot, @options)

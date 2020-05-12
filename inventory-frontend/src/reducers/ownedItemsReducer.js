@@ -16,7 +16,7 @@ export default (state = { ownedItems: [], loadingOwnedItems: true }, action) => 
         loadingOwnedItems: false
       }
     case 'ADD_OWNED_ITEM':
-      return { ...state, encounters: [...state.ownedItems, action.ownedItem], loadingOwnedItems: false }
+      return { ...state, ownedItems: [...state.ownedItems, action.ownedItem], loadingOwnedItems: false }
     case 'LOADING_OWNED_ITEMS':
       return {...state, loadingOwnedItems: true }
     case 'UPDATE_OWNED_ITEM':

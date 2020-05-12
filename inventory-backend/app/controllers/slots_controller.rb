@@ -8,7 +8,17 @@ class SlotsController < ApplicationController
   end 
 
   def create
-    slot = Slot.new(slot_params(params))
+    parameters = slot_params(params)
+
+    if( !parameters[:owned_item_id] && parameters[:base_item_id] )
+      item = OwnedItem.new(character_id: parameters[:character_id], base_item_id: parameters[:base_item_id])
+      if item.save
+        parameters[:owned_item_id] = item.id
+      end
+      delete parameters[:base_item_id]
+    end
+
+    slot = Slot.new(parameters)
     if slot.save
       render json: SlotSerializer.new(slot)
     else
@@ -33,7 +43,7 @@ class SlotsController < ApplicationController
   private
 
   def slot_params(params)
-    params.require(:slot).permit(:kind, :character_id, :owned_item_id, :location)
+    params.require(:slot).permit(:kind, :character_id, :owned_item_id, :base_item_id, :location)
   end
 
   def render_slot

@@ -9,7 +9,6 @@ import BaseItemSidebar from '../item/baseItem/baseItemSidebar'
 
 class CharacterPage extends Component {
   getCharacter = () => { 
-    this.props.setActiveCharacter(this.props.match.params.characterId)
     return this.props.characters.find(character => character.id === this.props.match.params.characterId)
   }
 
@@ -17,6 +16,12 @@ class CharacterPage extends Component {
     this.props.fetchSlots(this.props.match.params.characterId)
     this.props.fetchOwnedItems(this.props.match.params.characterId)
     this.props.setActiveCharacter(this.props.match.params.characterId)
+  }
+
+  componentDidUpdate = () => {
+    if(this.props.activeCharacter !== this.props.match.params.characterId){
+      this.props.setActiveCharacter(this.props.match.params.characterId)
+    }
   }
 
   render(){
@@ -37,7 +42,7 @@ class CharacterPage extends Component {
       }else{
         return(
           <>
-            <div className="main">
+            <div className="main no-margin">
               <CharacterInfo character={character} />
               <CharacterInventory character={character} />
             </div>
@@ -51,7 +56,8 @@ class CharacterPage extends Component {
 const mapStateToProps = state => ({
   characters: state.characters.characters,
   loading: state.characters.loadingCharacters,
-  showItemList: state.baseItems.showItemList
+  showItemList: state.baseItems.showItemList,
+  activeCharacter: state.characters.activeCharacter
 })
 
 export default connect(mapStateToProps, { fetchSlots, fetchOwnedItems, setActiveCharacter })(CharacterPage)

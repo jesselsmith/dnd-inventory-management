@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.main {
+  margin: auto;
+  width: 85vw;
+}
+
 .inventory {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -27,14 +32,19 @@ code {
   border-style: solid;
   align-items: center;
   text-align: center;
-  width: 30vw;
-  height: 41vw;
+  width: 20vw;
+  height: 27vw;
   position: relative;
 }
 
-.margin .inventory-item {
-  width: 20vw;
-  height: 27vw;
+.hovered-item {
+  width: 30vw;
+  height: 41vw;
+  animation: grow 200ms;
+}
+
+.unhovered-item {
+  animation: shrink 100ms;
 }
 
 .heavy {
@@ -87,17 +97,76 @@ code {
   font-size: large;
 }
 .margin {
-  margin-right: 25%;
+  width: 72%;
+  margin-right: 28%;
   float: left;
+  animation-name: margin;
+  animation-duration: 300ms;
 }
 .item-sidebar {
-  width: 25%;
+  width: 28%;
   display: block;
   position: fixed;
   right: 0;
+  animation-name: sidebar;
+  animation-duration: 300ms;
 }
 
 .selected {
   border: 10px solid rgb(0, 225, 255);
   background-color: rgb(227, 252, 255);
+  animation-name: selectedSlot;
+  animation-duration: 400ms;
+}
+
+.no-margin {
+  animation: no-margin 300ms;
+}
+
+@keyframes sidebar {
+ from{right:-300px;opacity:0;} 
+ to{right:0;opacity:1;}
+}
+
+@keyframes margin {
+  from{width: 85vw; margin: auto; margin-right: 0%; float: none;} 
+  to{width: 72%; float: left;}
+}
+
+@keyframes selectedSlot {
+  from{
+    border: 10px solid black;
+    background-color: white;
+  }
+  to{
+    border: 10px solid rgb(0, 225, 255);
+    background-color: rgb(227, 252, 255);
+  }
+}
+
+@keyframes no-margin {
+  from{width: 72%; margin-right: 28%; float: left;} 
+  to{width: 85vw; margin: auto; float: none;}
+}
+
+@keyframes shrink {
+  from{
+    width: 30vw;
+    height: 41vw;
+  }
+  to{
+    width: 20vw;
+    height: 27vw;
+  }
+}
+
+@keyframes grow {
+  from{
+    width: 20vw;
+    height: 27vw;
+  }
+  to{
+    width: 30vw;
+    height: 41vw;
+  }
 }

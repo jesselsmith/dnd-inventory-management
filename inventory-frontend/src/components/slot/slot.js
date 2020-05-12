@@ -10,13 +10,15 @@ class Slot extends Component {
     showRemove: false,
     showAdd: false,
     showChargeButtons: false,
-    showSelected: false
+    showSelected: false,
+    hovered: "no"
   }
   
   handleMouseEnter = event => {
     if(Boolean(this.props.slot)){
       this.setState({
-        showRemove: true
+        showRemove: true,
+        hovered: "hovered"
       })
     }else{
       this.setState({
@@ -29,7 +31,8 @@ class Slot extends Component {
   handleMouseLeave = event => {
     if(Boolean(this.props.slot)){
       this.setState({
-        showRemove: false
+        showRemove: false,
+        hovered: "unhovered"
       })
     }else{
       this.setState({
@@ -56,7 +59,6 @@ class Slot extends Component {
   handleAddItem = event => {
     this.props.showItemList()
     this.props.setSelectedSlot(this.props.slotType, this.props.location)
-    setTimeout(() => { document.getElementById(this.id()).scrollIntoView() }, 1)
   }
 
   handleRemoveItem = () => {
@@ -70,6 +72,11 @@ class Slot extends Component {
       this.props.location === this.props.selectedSlot.location){
         className += ` selected`
       }
+    if(this.state.hovered === "hovered"){
+      className += ' hovered-item'
+    }else if(this.state.hovered === "unhovered"){
+      className += ' unhovered-item'
+    }
     return className
   }
 

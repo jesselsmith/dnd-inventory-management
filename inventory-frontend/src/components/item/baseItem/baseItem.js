@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { selectItem } from '../../../actions/baseItemActions'
 
 class BaseItem extends Component {
   render(){
@@ -10,4 +11,4 @@ class BaseItem extends Component {
   }
 }
 
-export default BaseItem
+export default connect(null, { selectItem })(BaseItem)

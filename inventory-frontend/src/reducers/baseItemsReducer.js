@@ -8,7 +8,7 @@ const updateModel = (modelArray, updatedModel) => {
   })
 }
 
-export default (state = { baseItems: [], loadingBaseItems: true, showItemList: false }, action) => {
+export default (state = { baseItems: [], loadingBaseItems: true, showItemList: false, selectedItem: null }, action) => {
   switch (action.type) {
     case 'SET_BASE_ITEMS':
       return {
@@ -30,7 +30,11 @@ export default (state = { baseItems: [], loadingBaseItems: true, showItemList: f
     case 'SHOW_ITEM_LIST':
       return { ...state, showItemList: true }
     case 'HIDE_ITEM_LIST':
-      return { ...state, showItemList: false } 
+      return { ...state, showItemList: false }
+    case 'SELECT_ITEM':
+      return { ...state, selectedItem: action.item }
+    case 'CLEAR_SELECTED_ITEM':
+      return { ...state, selectedItem: null }
     default:
       return state
   }

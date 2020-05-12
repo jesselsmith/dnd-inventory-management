@@ -1,3 +1,5 @@
+import { bindActionCreators } from "redux"
+
 const BASE_URL = 'http://localhost:3001/'
 
 export const fetchBaseItems = characterId => {
@@ -50,5 +52,17 @@ export const hideItemList = () => {
   return dispatch => {
     dispatch({ type: 'HIDE_ITEM_LIST' })
     dispatch({ type: 'CLEAR_SELECTED_SLOT' })
+  }
+}
+
+export const selectItem = item => {
+  return dispatch => {
+    dispatch({ type: 'SELECT_ITEM', item: item })
+  }
+}
+
+export const clearSelectedItem = () => {
+  return dispatch => {
+    dispatch({ type: 'CLEAR_SELECTED_ITEM' })
   }
 }

@@ -3,25 +3,28 @@ import BaseItemsList from './baseItemsList'
 import BaseItemSearch from './baseItemSearch'
 import { connect } from 'react-redux';
 import { hideItemList } from '../../../actions/baseItemActions'
+import { postOwnedItem } from '../../../actions/ownedItemActions'
+import { postSlot } from '../../../actions/slotActions'
 
 class BaseItemSidebar extends Component {
 
-  state={
-    selectedItem: null
-  }
 
   handleAdd = () => {
-
+    this.props.postSlot({ kind: this.props.selectedSlot.kind, location: this.props.selectedSlot.location, base_item_id: this.props.selectedItem.id, character_id: this.props.activeCharacter })
+    this.props.hideItemList()
   }
 
   handleCancel = () => {
     this.props.hideItemList()
   }
 
-  selectItem = item => {
-    this.setState({
-      selectedItem: item
-    })
+
+  scrollToElement= (element) => {
+    setTimeout(() => { element.scrollIntoView() }, 280)
+  }
+
+  selectedSlotElement = () => {
+    return document.getElementById(`${this.props.selectedSlot.kind}-${this.props.selectedSlot.location}`)
   }
 
   render(){
@@ -29,7 +32,7 @@ class BaseItemSidebar extends Component {
       <div className="item-sidebar">
         <h3>Add Item</h3>
         <BaseItemSearch />
-        <BaseItemsList selectItem={this.selectItem} />
+        <BaseItemsList selectedItem={this.props.selectedItem} />
         <button onClick={this.handleCancel} >Cancel</button>
         <button onClick={this.handleAdd} >Add Item</button>
       </div>
@@ -39,7 +42,9 @@ class BaseItemSidebar extends Component {
 
 const mapStateToProps = state => ({
   activeCharacter: state.characters.activeCharacter,
-  selectedSlot: state.slots.selectedSlot
+  selectedSlot: state.slots.selectedSlot,
+  selectedItem: state.baseItems.selectedItem,
+  ownedItems: state.ownedItems.ownedItems
 })
 
-export default connect(mapStateToProps, { hideItemList })(BaseItemSidebar)
+export default connect(mapStateToProps, { hideItemList, postOwnedItem, postSlot })(BaseItemSidebar)

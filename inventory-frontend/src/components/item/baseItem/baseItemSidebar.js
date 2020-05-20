@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BaseItemsList from './baseItemsList'
 import BaseItemSearch from './baseItemSearch'
 import { connect } from 'react-redux';
-import { hideItemList } from '../../../actions/baseItemActions'
+import { hideItemList, clearSelectedItem } from '../../../actions/baseItemActions'
 import { postOwnedItem } from '../../../actions/ownedItemActions'
 import { postSlot } from '../../../actions/slotActions'
 
@@ -12,6 +12,7 @@ class BaseItemSidebar extends Component {
   handleAdd = () => {
     this.props.postSlot({slot: { kind: this.props.selectedSlot.kind, location: this.props.selectedSlot.location - 1, base_item_id: this.props.selectedItem.id, character_id: this.props.activeCharacter} })
     this.scrollToElement(this.selectedSlotElement())
+    this.props.clearSelectedItem()
     this.props.hideItemList()
   }
 
@@ -48,4 +49,4 @@ const mapStateToProps = state => ({
   ownedItems: state.ownedItems.ownedItems
 })
 
-export default connect(mapStateToProps, { hideItemList, postOwnedItem, postSlot })(BaseItemSidebar)
+export default connect(mapStateToProps, { hideItemList, postOwnedItem, postSlot, clearSelectedItem })(BaseItemSidebar)

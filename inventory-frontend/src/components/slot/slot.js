@@ -32,9 +32,13 @@ class Slot extends Component {
   handleMouseLeave = event => {
     this.setState({
       showRemove: false,
-      hovered: "unhovered",
       showAdd: false
     })
+    if(this.state.hovered === "hovered"){
+      this.setState({
+        hovered: "unhovered"
+      })
+    }
   }
 
   showButtons = () => {
@@ -58,8 +62,8 @@ class Slot extends Component {
   }
 
   handleRemoveItem = () => {
-    const ownedItemId = this.props.slot.relationships.owned_item.data.id
-    this.props.deleteOwnedItem(ownedItemId)
+    const ownedItem = this.getItem()
+    this.props.deleteOwnedItem(ownedItem)
   }
 
   className = () => {

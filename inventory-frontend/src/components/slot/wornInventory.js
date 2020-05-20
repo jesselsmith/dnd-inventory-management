@@ -8,9 +8,7 @@ const wornInventory = props => {
   return (
     <div>
       Worn Inventory
-      <div className="inventory">
-        <SlotList slots={wornSlots} numSlots={9} slotType="worn" />
-      </div>
+      <SlotList slots={wornSlots} numSlots={9} slotType="worn" />
     </div>
   )
 }

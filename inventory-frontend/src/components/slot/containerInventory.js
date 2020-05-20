@@ -4,7 +4,12 @@ import AddContainerForm from './addContainerForm'
 
 class containerInventory extends Component {
   state = {
-    showAddContainerForm: false
+    showAddContainerForm: false,
+    containers: []
+  }
+
+  addExistingContainers = () => {
+
   }
 
   handleAddContainer = () => {
@@ -15,11 +20,20 @@ class containerInventory extends Component {
 
   showButtonOrForm = () => {
     if(this.state.showAddContainerForm){
-      return <AddContainerForm />
+      return <AddContainerForm addNewContainer={this.addNewContainer} />
     }else{
       return <button onClick={this.handleAddContainer}>Add Container</button>
     }
   }
+
+  addNewContainer = container => {
+    this.setState( prevState => ({
+      ...prevState,
+      containers: [...prevState.containers, container]
+    }))
+  }
+
+
 
   render(){
     return (

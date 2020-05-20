@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
 import Slot from './slot'
 
 class SlotList extends Component {
-
 
   getEncumberance = i => {
     if(i >= this.props.heavilyEncumbered){

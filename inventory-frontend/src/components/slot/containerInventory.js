@@ -4,9 +4,13 @@ import { connect } from 'react-redux'
 const containerInventory = props => {
   return (
     <div>
-      "Container Inventory"
+      <h4>Container Inventory</h4>
     </div>
   )
 }
 
-export default containerInventory
+const mapStateToProps = state => ({
+  slots: state.slots.slots
+})
+
+export default connect(mapStateToProps)(containerInventory)

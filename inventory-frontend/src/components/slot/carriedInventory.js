@@ -7,7 +7,7 @@ const carriedInventory = props => {
 
   return (
     <div>
-      "Carried Inventory"
+      <h4>Carried Inventory</h4>
       <SlotList 
         slots={carriedSlots} 
         numSlots={props.maxSlots} 

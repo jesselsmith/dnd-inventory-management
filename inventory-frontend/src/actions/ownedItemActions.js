@@ -52,6 +52,7 @@ export const deleteOwnedItem = ownedItemId => {
     fetch(`${BASE_URL}owned_items/${ownedItemId}`, DELETE_OPTIONS).then(resp=> resp.json())
     .then(json => {
       dispatch({type: 'REMOVE_OWNED_ITEM', ownedItemId: json.data.id})
+      debugger
       json.data.relationships.slots.data.forEach(slot => {
         dispatch({type: 'REMOVE_SLOT', slotId: slot.id})
       })

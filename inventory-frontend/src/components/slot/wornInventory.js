@@ -1,24 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import Slot from '../slot/slot'
+import SlotList from './slotList';
 
 const wornInventory = props => {
+  const wornSlots = props.slots.filter(slot => slot.attributes.kind === "worn")
   return (
     <div>
       Worn Inventory
       <div className="inventory">
-        <Slot location="Bandolier 1" slotType="worn"/>
-        <Slot location="Head" slotType="worn"/>
-        <Slot location="Bandolier 2" slotType="worn"/>
-        <Slot location="Left Hand" slotType="worn"/>
-        <Slot location="Torso" slotType="worn"/>
-        <Slot location="Right Hand" slotType="worn"/>
-        <Slot location="Bandolier 3" slotType="worn"/>
-        <Slot location="Legs" slotType="worn"/>
-        <Slot location="Bandolier 4" slotType="worn"/>
+        <SlotList slots={wornSlots} numSlots={9} slotType="worn" />
       </div>
     </div>
   )
 }
 
-export default wornInventory
+const mapStateToProps = state => ({
+  slots: state.slots.slots
+})
+
+export default connect(mapStateToProps)(wornInventory)

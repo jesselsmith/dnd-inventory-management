@@ -97,7 +97,7 @@ class Slot extends Component {
     if(this.isItemInSlot()){
       return <OwnedItem itemId={this.props.slot.relationships.owned_item.data.id} />
     }else{
-      return this.props.location
+      return this.props.slotName
     }
   }
 

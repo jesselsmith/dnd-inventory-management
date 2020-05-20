@@ -32,7 +32,6 @@ export const postSlot = slot => {
     dispatch({ type: 'LOADING_SLOTS' })
     fetch(BASE_URL + 'slots', optionMaker(slot)).then(resp => resp.json())
       .then(json => {
-        debugger
         dispatch({ type: 'ADD_OWNED_ITEM', ownedItem: json.included[0] })
         dispatch({ type: 'ADD_SLOT', slot: json.data })
       })
@@ -44,6 +43,22 @@ export const patchSlot = slot => {
     fetch(`${BASE_URL}slots/${slot.id}`, optionMaker(slot, 'PATCH')).then(resp => resp.json())
     .then(json => {
       dispatch({ type: 'UPDATE_SLOT', slot: json.data })
+    })
+  }
+}
+
+const DELETE_OPTIONS = {
+  method: 'DELETE',
+  headers: {
+    "Accept": "application/json"
+  }
+}
+
+export const deleteSlot = slot => {
+  return dispatch => {
+    fetch(`${BASE_URL}slots/${slot.id}`, DELETE_OPTIONS).then(resp=> resp.json())
+    .then(json => {
+      dispatch({type: 'REMOVE_SLOT', slotId: json.data.id})
     })
   }
 }

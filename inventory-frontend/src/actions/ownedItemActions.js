@@ -39,3 +39,22 @@ export const patchOwnedItem = ownedItem => {
     })
   }
 }
+
+const DELETE_OPTIONS = {
+  method: 'DELETE',
+  headers: {
+    "Accept": "application/json"
+  }
+}
+
+export const deleteOwnedItem = ownedItemId => {
+  return dispatch => {
+    fetch(`${BASE_URL}owned_items/${ownedItemId}`, DELETE_OPTIONS).then(resp=> resp.json())
+    .then(json => {
+      dispatch({type: 'REMOVE_OWNED_ITEM', ownedItemId: json.data.id})
+      json.data.relationships.slots.data.forEach(slot => {
+        dispatch({type: 'REMOVE_SLOT', slotId: slot.id})
+      })
+    })
+  }
+}

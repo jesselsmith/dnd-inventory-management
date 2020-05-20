@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import OwnedItem from '../item/ownedItem/ownedItem'
 import { showItemList } from '../../actions/baseItemActions'
-import { setSelectedSlot } from '../../actions/slotActions'
+import { setSelectedSlot, deleteSlot } from '../../actions/slotActions'
+import { deleteOwnedItem } from '../../actions/ownedItemActions'
 
 class Slot extends Component {
   
@@ -15,7 +16,7 @@ class Slot extends Component {
   }
   
   handleMouseEnter = event => {
-    if(Boolean(this.props.slot)){
+    if(this.isItemInSlot()){
       this.setState({
         showRemove: true,
         hovered: "hovered"
@@ -29,16 +30,11 @@ class Slot extends Component {
   }
 
   handleMouseLeave = event => {
-    if(Boolean(this.props.slot)){
-      this.setState({
-        showRemove: false,
-        hovered: "unhovered"
-      })
-    }else{
-      this.setState({
-        showAdd: false
-      })
-    }
+    this.setState({
+      showRemove: false,
+      hovered: "unhovered",
+      showAdd: false
+    })
   }
 
   showButtons = () => {
@@ -62,7 +58,8 @@ class Slot extends Component {
   }
 
   handleRemoveItem = () => {
-
+    const ownedItemId = this.props.slot.relationships.owned_item.data.id
+    this.props.deleteOwnedItem(ownedItemId)
   }
 
   className = () => {
@@ -84,34 +81,39 @@ class Slot extends Component {
     return `${this.props.slotType}-${this.props.location}`
   }
 
-  render(){
-    if(Boolean(this.props.slot)){
-      return (
-        <div className={this.className()} 
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        >
-          <OwnedItem itemId={this.props.slot.relationships.owned_item.data.id} />
-          {this.showButtons()}
-        </div>
-      )
+  getItem = () => {
+    return this.props.ownedItems.find(item => item.id === this.props.slot.relationships.owned_item.data.id)
+  }
+
+  isItemInSlot = () => {
+    return Boolean(this.props.slot) && Boolean(this.getItem())
+  }
+
+  showItem = () => {
+    if(this.isItemInSlot()){
+      return <OwnedItem itemId={this.props.slot.relationships.owned_item.data.id} />
     }else{
-      return (
-        <div className={this.className()} id={this.id()}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        >
-           {this.props.location}
-           {this.showButtons()}
-        </div>
-      )
+      return this.props.location
     }
   }
+
+  render(){
+    return (
+      <div className={this.className()} id={this.id()}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+          {this.showItem()}
+          {this.showButtons()}
+      </div>
+    )
+    }
 }
 
 const mapStateToProps = state => ({
   characterId: state.characters.activeCharacter,
-  selectedSlot: state.slots.selectedSlot
+  selectedSlot: state.slots.selectedSlot,
+  ownedItems: state.ownedItems.ownedItems
 })
 
-export default connect(mapStateToProps, { showItemList, setSelectedSlot })(Slot)
+export default connect(mapStateToProps, { showItemList, setSelectedSlot, deleteSlot, deleteOwnedItem })(Slot)

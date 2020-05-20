@@ -1,5 +1,5 @@
 class OwnedItem < ApplicationRecord
   belongs_to :character
   belongs_to :base_item
-  has_many :slots
+  has_many :slots, dependent: :destroy
 end

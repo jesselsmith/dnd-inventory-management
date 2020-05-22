@@ -1,6 +1,7 @@
 class Character < ApplicationRecord
   has_many :owned_items, dependent: :destroy
   has_many :slots, dependent: :destroy
+  has_many :containers, dependent: :destroy
 
   def max_slots
     [self.strength*2, 9].max

@@ -6,6 +6,7 @@ import { fetchSlots } from '../../actions/slotActions'
 import { fetchOwnedItems} from '../../actions/ownedItemActions'
 import { setActiveCharacter } from '../../actions/characterActions'
 import BaseItemSidebar from '../item/baseItem/baseItemSidebar'
+import { fetchContainers } from '../../actions/containerActions'
 
 class CharacterPage extends Component {
   getCharacter = () => { 
@@ -16,6 +17,7 @@ class CharacterPage extends Component {
     this.props.fetchSlots(this.props.match.params.characterId)
     this.props.fetchOwnedItems(this.props.match.params.characterId)
     this.props.setActiveCharacter(this.props.match.params.characterId)
+    this.props.fetchContainers(this.props.match.params.characterId)
   }
 
   componentDidUpdate = () => {
@@ -60,4 +62,4 @@ const mapStateToProps = state => ({
   activeCharacter: state.characters.activeCharacter
 })
 
-export default connect(mapStateToProps, { fetchSlots, fetchOwnedItems, setActiveCharacter })(CharacterPage)
+export default connect(mapStateToProps, { fetchSlots, fetchOwnedItems, setActiveCharacter, fetchContainers })(CharacterPage)

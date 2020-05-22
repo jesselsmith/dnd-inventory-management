@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import AddContainerForm from './addContainerForm'
+import AddContainerForm from '../container/addContainerForm'
+import ContainerList from '../container/containerList'
 
 class containerInventory extends Component {
   state = {
-    showAddContainerForm: false,
-    containers: []
+    showAddContainerForm: false
   }
 
   addExistingContainers = () => {
@@ -20,25 +20,17 @@ class containerInventory extends Component {
 
   showButtonOrForm = () => {
     if(this.state.showAddContainerForm){
-      return <AddContainerForm addNewContainer={this.addNewContainer} />
+      return <AddContainerForm />
     }else{
       return <button onClick={this.handleAddContainer}>Add Container</button>
     }
   }
 
-  addNewContainer = container => {
-    this.setState( prevState => ({
-      ...prevState,
-      containers: [...prevState.containers, container]
-    }))
-  }
-
-
-
   render(){
     return (
       <div>
         <h4>Container Inventory</h4>
+        <ContainerList />
         {this.showButtonOrForm()}
       </div>
     )
@@ -46,7 +38,8 @@ class containerInventory extends Component {
 }
 
 const mapStateToProps = state => ({
-  slots: state.slots.slots
+  slots: state.slots.slots,
+  containers: state.containers.containers
 })
 
 export default connect(mapStateToProps)(containerInventory)

@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 2020_05_20_224041) do
   create_table "containers", force: :cascade do |t|
     t.string "name"
     t.integer "num_slots"
+    t.integer "character_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["character_id"], name: "index_containers_on_character_id"
   end
 
   create_table "owned_items", force: :cascade do |t|
@@ -57,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_224041) do
     t.index ["owned_item_id"], name: "index_slots_on_owned_item_id"
   end
 
+  add_foreign_key "containers", "characters"
   add_foreign_key "owned_items", "base_items"
   add_foreign_key "owned_items", "characters"
   add_foreign_key "slots", "characters"

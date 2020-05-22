@@ -5,7 +5,6 @@ import Container from './container'
 class ContainerList extends Component {
   displayContainers = () => {
     return this.props.containers.map((container, i) => {
-      debugger
       return <Container key={i} name={container.attributes.name} numSlots={container.attributes.num_slots} />
     })
   }

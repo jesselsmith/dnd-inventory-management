@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 const container  = props => {
   const slots = props.slots.filter(slot => slot.attributes.kind === `container-${props.name}`)
-  debugger
   return (
     <>
       <h5>{props.name}</h5>

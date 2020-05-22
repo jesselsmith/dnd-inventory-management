@@ -11,9 +11,9 @@ class BaseItemsList extends Component {
 
   render(){
     return(
-      <>
+      <div className="item-list">
         {this.displayBaseItems()}
-      </>
+      </div>
     )
   }
 }

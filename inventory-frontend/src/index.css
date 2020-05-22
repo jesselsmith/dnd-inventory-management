@@ -131,6 +131,12 @@ code {
   animation: no-margin 300ms;
 }
 
+.item-list {
+  border: 1px solid black;
+  overflow-y: scroll;
+  height: 82vh;
+}
+
 @keyframes sidebar {
  from{right:-300px;opacity:0;} 
  to{right:0;opacity:1;}

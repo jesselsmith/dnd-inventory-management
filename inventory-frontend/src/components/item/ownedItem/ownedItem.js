@@ -58,7 +58,14 @@ class OwnedItem extends Component {
 
   displayImageOrName = () => {
     const baseItem = this.getItem().attributes.base_item
+    let imagePath = false
     if(baseItem.image){
+      try{
+        imagePath = require(`../../../../images/${baseItem.image}`)
+      }catch(err){
+      }
+    }
+    if(baseItem.image && imagePath){
       return <img className="item-img" src={require(`../../../../images/${baseItem.image}`)} alt={baseItem.name} />
     }else{
       return <h3 className="item-title">Name: {baseItem.name} </h3>

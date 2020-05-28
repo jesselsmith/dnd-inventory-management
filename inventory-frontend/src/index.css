@@ -155,8 +155,9 @@ code {
 
 .item-buttons {
   position: absolute;
-  bottom: 8vh;
-  left: 8vw;
+  bottom: 4vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .item-title {

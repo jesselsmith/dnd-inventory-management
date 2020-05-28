@@ -59,7 +59,7 @@
   {
     "index": "ballbearings1000",
     "name": "Ball bearings (bag of 1,000)",
-    "url": "ballbearing1000.jpg"
+    "url": "ballbearings1000.jpg"
   },
   {
     "index": "bardingbreastplate",

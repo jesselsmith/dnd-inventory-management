@@ -4,7 +4,7 @@ import { patchOwnedItem } from '../../../actions/ownedItemActions'
 
 class OwnedItem extends Component {
   state = {
-    showNotchButtons: false
+    showNotches: false
   }
 
   getItem = () => {
@@ -13,23 +13,31 @@ class OwnedItem extends Component {
 
   handleMouseEnter = () => {
     this.setState({
-      showNotchButtons: true
+      showNotches: true
     })
   }
 
   handleMouseLeave = () => {
     this.setState({
-      showNotchButtons: false
+      showNotches: false
     })
   }
 
-  showNotchButtons = () => {
-    let buttons  = []
-    if(this.state.showNotchButtons){
-      buttons.push(<button className="plus" key="1" onClick={this.handleNotchIncrease}>+</button>)
-      buttons.push(<button className="minus" key='2' onClick={this.handleNotchDecrease}>-</button>)
+  showNotches = () => {
+    let item = this.getItem()
+    if(this.state.showNotches){
+      return (
+        <div className="item-buttons" >
+          <div className="notches">
+            <span className="notch-text">Notches: {item.attributes.notches}</span>
+            <span className="notch-btns">
+              <button className="plus" key="1" onClick={this.handleNotchIncrease}>+</button>
+              <button className="minus" key='2' onClick={this.handleNotchDecrease}>-</button>
+            </span>
+          </div>
+        </div>
+      )
     }
-    return buttons
   }
 
   handleNotchIncrease = () => {
@@ -48,17 +56,21 @@ class OwnedItem extends Component {
     })
   }
 
+  displayImageOrName = () => {
+    const baseItem = this.getItem().attributes.base_item
+    if(baseItem.image){
+      return <img className="item-img" src={require(`../../../../images/${baseItem.image}`)} alt={baseItem.name} />
+    }else{
+      return <h3 className="item-title">Name: {baseItem.name} </h3>
+    }
+  }
+
   render(){
-    let item = this.getItem()
-    let baseItem = item.attributes.base_item
     return(
-      <><h3>Name: {baseItem.name} </h3>
-      <div className="notches" onMouseEnter={this.handleMouseEnter} 
-        onMouseLeave={this.handleMouseLeave}>
-        <span className="notch-text">Notches: {item.attributes.notches}</span>
-        <span className="notch-btns">{this.showNotchButtons()}</span>
+      <div className="owned-item" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+        {this.displayImageOrName()}
+        {this.showNotches()}
       </div>
-      </>
     )  
   }
 }

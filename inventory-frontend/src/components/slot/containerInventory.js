@@ -8,10 +8,6 @@ class containerInventory extends Component {
     showAddContainerForm: false
   }
 
-  addExistingContainers = () => {
-
-  }
-
   handleAddContainer = () => {
     this.setState({
       showAddContainerForm: true

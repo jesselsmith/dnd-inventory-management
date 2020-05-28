@@ -24,10 +24,8 @@ const optionMaker = (model, method = 'POST') => {
 export const postContainer = container => {
   return (dispatch) => {
     dispatch({ type: 'LOADING_CONTAINERS' })
-    debugger
     fetch(BASE_URL + 'containers', optionMaker(container)).then(resp => resp.json())
       .then(json => {
-        debugger
         dispatch({ type: 'ADD_CONTAINER', container: json.data })
       })
   }

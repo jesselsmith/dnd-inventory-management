@@ -9,1158 +9,1148 @@
   {
     "index": "abacus",
     "name": "Abacus",
-    "url": "/api/equipment/abacus"
+    "url": "abacus.jpg"
   },
   {
-    "index": "acid-vial",
-    "name": "Acid (vial)",
-    "url": "/api/equipment/acid-vial"
+    "index": "acid",
+    "name": "Acid",
+    "url": "acid.jpg"
   },
   {
-    "index": "alchemists-fire-flask",
-    "name": "Alchemist's fire (flask)",
-    "url": "/api/equipment/alchemists-fire-flask"
+    "index": "alchemistsfire",
+    "name": "Alchemist's fire",
+    "url": "alchemistsfire.jpg"
   },
   {
-    "index": "alchemists-supplies",
+    "index": "alchemistssupplies",
     "name": "Alchemist's supplies",
-    "url": "/api/equipment/alchemists-supplies"
+    "url": "alchemistssupplies.jpg"
   },
   {
     "index": "amulet",
     "name": "Amulet",
-    "url": "/api/equipment/amulet"
+    "url": "amulet.jpg"
   },
   {
-    "index": "animal-feed-1-day",
+    "index": "animalfeed1day",
     "name": "Animal Feed (1 day)",
-    "url": "/api/equipment/animal-feed-1-day"
+    "url": "animalfeed1day.jpg"
   },
   {
-    "index": "antitoxin-vial",
-    "name": "Antitoxin (vial)",
-    "url": "/api/equipment/antitoxin-vial"
+    "index": "antitoxin",
+    "name": "Antitoxin",
+    "url": "antitoxin.jpg"
   },
   {
-    "index": "arrow",
-    "name": "Arrow",
-    "url": "/api/equipment/arrow"
+    "index": "arrows",
+    "name": "Arrows",
+    "url": "arrows.jpg"
   },
   {
     "index": "backpack",
     "name": "Backpack",
-    "url": "/api/equipment/backpack"
+    "url": "backpack.jpg"
   },
   {
     "index": "bagpipes",
     "name": "Bagpipes",
-    "url": "/api/equipment/bagpipes"
+    "url": "bagpipes.jpg"
   },
   {
-    "index": "ball-bearings-bag-of-1000",
+    "index": "ballbearings1000",
     "name": "Ball bearings (bag of 1,000)",
-    "url": "/api/equipment/ball-bearings-bag-of-1000"
+    "url": "ballbearing1000.jpg"
   },
   {
-    "index": "barding-breastplate",
+    "index": "bardingbreastplate",
     "name": "Barding: Breastplate",
-    "url": "/api/equipment/barding-breastplate"
+    "url": "bardingbreastplate.jpg"
   },
   {
-    "index": "barding-chain-mail",
+    "index": "bardingchainmail",
     "name": "Barding: Chain mail",
-    "url": "/api/equipment/barding-chain-mail"
+    "url": "bardingchainmail.jpg"
   },
   {
-    "index": "barding-chain-shirt",
+    "index": "bardingchainshirt",
     "name": "Barding: Chain shirt",
-    "url": "/api/equipment/barding-chain-shirt"
+    "url": "bardingchainshirt.jpg"
   },
   {
-    "index": "barding-half-plate",
+    "index": "bardinghalfplate",
     "name": "Barding: Half plate",
-    "url": "/api/equipment/barding-half-plate"
+    "url": "bardinghalfplate.jpg"
   },
   {
-    "index": "barding-hide",
+    "index": "bardinghide",
     "name": "Barding: Hide",
-    "url": "/api/equipment/barding-hide"
+    "url": "bardinghide.jpg"
   },
   {
-    "index": "barding-leather",
+    "index": "bardingleather",
     "name": "Barding: Leather",
-    "url": "/api/equipment/barding-leather"
+    "url": "bardingleather.jpg"
   },
   {
-    "index": "barding-padded",
+    "index": "bardingpadded",
     "name": "Barding: Padded",
-    "url": "/api/equipment/barding-padded"
+    "url": "bardingpadded.jpg"
   },
   {
-    "index": "barding-plate",
+    "index": "bardingplate",
     "name": "Barding: Plate",
-    "url": "/api/equipment/barding-plate"
+    "url": "bardingplate.jpg"
   },
   {
-    "index": "barding-ring-mail",
+    "index": "bardingringmail",
     "name": "Barding: Ring mail",
-    "url": "/api/equipment/barding-ring-mail"
+    "url": "bardingringmail.jpg"
   },
   {
-    "index": "barding-scale-mail",
+    "index": "bardingscalemail",
     "name": "Barding: Scale mail",
-    "url": "/api/equipment/barding-scale-mail"
+    "url": "bardingscalemail.jpg"
   },
   {
-    "index": "barding-splint",
+    "index": "bardingsplint",
     "name": "Barding: Splint",
-    "url": "/api/equipment/barding-splint"
+    "url": "bardingsplint.jpg"
   },
   {
-    "index": "barding-studded-leather",
+    "index": "bardingstuddedleather",
     "name": "Barding: Studded Leather",
-    "url": "/api/equipment/barding-studded-leather"
+    "url": "bardingstuddedleather.jpg"
   },
   {
     "index": "barrel",
     "name": "Barrel",
-    "url": "/api/equipment/barrel"
+    "url": "barrel.jpg"
   },
   {
     "index": "basket",
     "name": "Basket",
-    "url": "/api/equipment/basket"
+    "url": "basket.jpg"
   },
   {
     "index": "battleaxe",
     "name": "Battleaxe",
-    "url": "/api/equipment/battleaxe"
+    "url": "battleaxe.jpg"
   },
   {
     "index": "bedroll",
     "name": "Bedroll",
-    "url": "/api/equipment/bedroll"
+    "url": "bedroll.jpg"
   },
   {
     "index": "bell",
     "name": "Bell",
-    "url": "/api/equipment/bell"
+    "url": "bell.jpg"
   },
   {
-    "index": "bit-and-bridle",
+    "index": "bitandbridle",
     "name": "Bit and bridle",
-    "url": "/api/equipment/bit-and-bridle"
+    "url": "bitandbridle.jpg"
   },
   {
     "index": "blanket",
     "name": "Blanket",
-    "url": "/api/equipment/blanket"
+    "url": "blanket.jpg"
   },
   {
-    "index": "block-and-tackle",
+    "index": "blockandtackle",
     "name": "Block and tackle",
-    "url": "/api/equipment/block-and-tackle"
+    "url": "blockandtackle.jpg"
   },
   {
     "index": "blowgun",
     "name": "Blowgun",
-    "url": "/api/equipment/blowgun"
+    "url": "blowgun.jpg"
   },
   {
-    "index": "blowgun-needle",
-    "name": "Blowgun needle",
-    "url": "/api/equipment/blowgun-needle"
+    "index": "blowgunneedles",
+    "name": "Blowgun needles",
+    "url": "blowgunneedles.jpg"
   },
   {
     "index": "book",
     "name": "Book",
-    "url": "/api/equipment/book"
+    "url": "book.jpg"
   },
   {
-    "index": "bottle-glass",
+    "index": "bottleglass",
     "name": "Bottle, glass",
-    "url": "/api/equipment/bottle-glass"
+    "url": "bottleglass.jpg"
   },
   {
     "index": "breastplate",
     "name": "Breastplate",
-    "url": "/api/equipment/breastplate"
+    "url": "breastplate.jpg"
   },
   {
-    "index": "brewers-supplies",
+    "index": "brewerssupplies",
     "name": "Brewer's supplies",
-    "url": "/api/equipment/brewers-supplies"
+    "url": "brewerssupplies.jpg"
   },
   {
     "index": "bucket",
     "name": "Bucket",
-    "url": "/api/equipment/bucket"
+    "url": "bucket.jpg"
   },
   {
-    "index": "burglars-pack",
+    "index": "burglarspack",
     "name": "Burglar's Pack",
-    "url": "/api/equipment/burglars-pack"
+    "url": "burglarspack.jpg"
   },
   {
-    "index": "calligraphers-supplies",
+    "index": "calligrapherssupplies",
     "name": "Calligrapher's supplies",
-    "url": "/api/equipment/calligraphers-supplies"
+    "url": "calligrapherssupplies.jpg"
   },
   {
     "index": "caltrops",
     "name": "Caltrops",
-    "url": "/api/equipment/caltrops"
+    "url": "caltrops.jpg"
   },
   {
     "index": "camel",
     "name": "Camel",
-    "url": "/api/equipment/camel"
+    "url": "camel.jpg"
   },
   {
     "index": "candle",
     "name": "Candle",
-    "url": "/api/equipment/candle"
+    "url": "candle.jpg"
   },
   {
-    "index": "carpenters-tools",
+    "index": "carpenterstools",
     "name": "Carpenter's tools",
-    "url": "/api/equipment/carpenters-tools"
+    "url": "carpenterstools.jpg"
   },
   {
     "index": "carriage",
     "name": "Carriage",
-    "url": "/api/equipment/carriage"
+    "url": "carriage.jpg"
   },
   {
     "index": "cart",
     "name": "Cart",
-    "url": "/api/equipment/cart"
+    "url": "cart.jpg"
   },
   {
-    "index": "cartographers-tools",
+    "index": "cartographerstools",
     "name": "Cartographer's tools",
-    "url": "/api/equipment/cartographers-tools"
+    "url": "cartographerstools.jpg"
   },
   {
-    "index": "case-crossbow-bolt",
-    "name": "Case, crossbow bolt",
-    "url": "/api/equipment/case-crossbow-bolt"
+    "index": "casecrossbowbolts",
+    "name": "Case, crossbow bolts",
+    "url": "casecrossbowbolts.jpg"
   },
   {
-    "index": "case-map-or-scroll",
+    "index": "casemaporscroll",
     "name": "Case, map or scroll",
-    "url": "/api/equipment/case-map-or-scroll"
+    "url": "casemaporscroll.jpg"
   },
   {
-    "index": "chain-10-feet",
+    "index": "chain",
     "name": "Chain (10 feet)",
-    "url": "/api/equipment/chain-10-feet"
+    "url": "chain.jpg"
   },
   {
-    "index": "chain-mail",
+    "index": "chainmail",
     "name": "Chain Mail",
-    "url": "/api/equipment/chain-mail"
+    "url": "chainmail.jpg"
   },
   {
-    "index": "chain-shirt",
+    "index": "chainshirt",
     "name": "Chain Shirt",
-    "url": "/api/equipment/chain-shirt"
+    "url": "chainshirt.jpg"
   },
   {
-    "index": "chalk-1-piece",
+    "index": "chalk1piece",
     "name": "Chalk (1 piece)",
-    "url": "/api/equipment/chalk-1-piece"
+    "url": "chalk1piece.jpg"
   },
   {
     "index": "chariot",
     "name": "Chariot",
-    "url": "/api/equipment/chariot"
+    "url": "chariot.jpg"
   },
   {
     "index": "chest",
     "name": "Chest",
-    "url": "/api/equipment/chest"
+    "url": "chest.jpg"
   },
   {
-    "index": "climbers-kit",
+    "index": "climberskit",
     "name": "Climber's Kit",
-    "url": "/api/equipment/climbers-kit"
+    "url": "climberskit.jpg"
   },
   {
-    "index": "clothes-common",
+    "index": "clothescommon",
     "name": "Clothes, common",
-    "url": "/api/equipment/clothes-common"
+    "url": "clothescommon.jpg"
   },
   {
-    "index": "clothes-costume",
+    "index": "clothescostume",
     "name": "Clothes, costume",
-    "url": "/api/equipment/clothes-costume"
+    "url": "clothescostume.jpg"
   },
   {
-    "index": "clothes-fine",
+    "index": "clothesfine",
     "name": "Clothes, fine",
-    "url": "/api/equipment/clothes-fine"
+    "url": "clothesfine.jpg"
   },
   {
-    "index": "clothes-travelers",
+    "index": "clothestravelers",
     "name": "Clothes, traveler's",
-    "url": "/api/equipment/clothes-travelers"
+    "url": "clothestravelers.jpg"
   },
   {
     "index": "club",
     "name": "Club",
-    "url": "/api/equipment/club"
+    "url": "club.jpg"
   },
   {
-    "index": "cobblers-tools",
+    "index": "cobblerstools",
     "name": "Cobbler's tools",
-    "url": "/api/equipment/cobblers-tools"
+    "url": "cobblerstools.jpg"
   },
   {
-    "index": "component-pouch",
+    "index": "componentpouch",
     "name": "Component pouch",
-    "url": "/api/equipment/component-pouch"
+    "url": "componentpouch.jpg"
   },
   {
-    "index": "cooks-utensils",
+    "index": "cooksutensils",
     "name": "Cook's utensils",
-    "url": "/api/equipment/cooks-utensils"
+    "url": "cooksutensils.jpg"
   },
   {
-    "index": "crossbow-bolt",
+    "index": "crossbowbolt",
     "name": "Crossbow bolt",
-    "url": "/api/equipment/crossbow-bolt"
+    "url": "crossbowbolt.jpg"
   },
   {
-    "index": "crossbow-hand",
+    "index": "crossbowhand",
     "name": "Crossbow, hand",
-    "url": "/api/equipment/crossbow-hand"
+    "url": "crossbowhand.jpg"
   },
   {
-    "index": "crossbow-heavy",
+    "index": "crossbowheavy",
     "name": "Crossbow, heavy",
-    "url": "/api/equipment/crossbow-heavy"
+    "url": "crossbowheavy.jpg"
   },
   {
-    "index": "crossbow-light",
+    "index": "crossbowlight",
     "name": "Crossbow, light",
-    "url": "/api/equipment/crossbow-light"
+    "url": "crossbowlight.jpg"
   },
   {
     "index": "crowbar",
     "name": "Crowbar",
-    "url": "/api/equipment/crowbar"
+    "url": "crowbar.jpg"
   },
   {
     "index": "crystal",
     "name": "Crystal",
-    "url": "/api/equipment/crystal"
+    "url": "crystal.jpg"
   },
   {
     "index": "dagger",
     "name": "Dagger",
-    "url": "/api/equipment/dagger"
+    "url": "dagger.jpg"
   },
   {
     "index": "dart",
     "name": "Dart",
-    "url": "/api/equipment/dart"
+    "url": "dart.jpg"
   },
   {
-    "index": "dice-set",
+    "index": "diceset",
     "name": "Dice set",
-    "url": "/api/equipment/dice-set"
+    "url": "diceset.jpg"
   },
   {
-    "index": "diplomats-pack",
+    "index": "diplomatspack",
     "name": "Diplomat's Pack",
-    "url": "/api/equipment/diplomats-pack"
+    "url": "diplomatspack.jpg"
   },
   {
-    "index": "disguise-kit",
+    "index": "disguisekit",
     "name": "Disguise Kit",
-    "url": "/api/equipment/disguise-kit"
+    "url": "disguisekit.jpg"
   },
   {
     "index": "donkey",
     "name": "Donkey",
-    "url": "/api/equipment/donkey"
+    "url": "donkey.jpg"
   },
   {
     "index": "drum",
     "name": "Drum",
-    "url": "/api/equipment/drum"
+    "url": "drum.jpg"
   },
   {
     "index": "dulcimer",
     "name": "Dulcimer",
-    "url": "/api/equipment/dulcimer"
+    "url": "dulcimer.jpg"
   },
   {
-    "index": "dungeoneers-pack",
+    "index": "dungeoneerspack",
     "name": "Dungeoneer's Pack",
-    "url": "/api/equipment/dungeoneers-pack"
+    "url": "dungeoneerspack.jpg"
   },
   {
     "index": "elephant",
     "name": "Elephant",
-    "url": "/api/equipment/elephant"
+    "url": "elephant.jpg"
   },
   {
     "index": "emblem",
     "name": "Emblem",
-    "url": "/api/equipment/emblem"
+    "url": "emblem.jpg"
   },
   {
-    "index": "entertainers-pack",
+    "index": "entertainerspack",
     "name": "Entertainer's Pack",
-    "url": "/api/equipment/entertainers-pack"
+    "url": "entertainerspack.jpg"
   },
   {
-    "index": "explorers-pack",
+    "index": "explorerspack",
     "name": "Explorer's Pack",
-    "url": "/api/equipment/explorers-pack"
+    "url": "explorerspack.jpg"
   },
   {
-    "index": "fishing-tackle",
+    "index": "fishingtackle",
     "name": "Fishing tackle",
-    "url": "/api/equipment/fishing-tackle"
+    "url": "fishingtackle.jpg"
   },
   {
     "index": "flail",
     "name": "Flail",
-    "url": "/api/equipment/flail"
+    "url": "flail.jpg"
   },
   {
-    "index": "flask-or-tankard",
-    "name": "Flask or tankard",
-    "url": "/api/equipment/flask-or-tankard"
+    "index": "flask",
+    "name": "Flask",
+    "url": "flask.jpg"
   },
   {
     "index": "flute",
     "name": "Flute",
-    "url": "/api/equipment/flute"
+    "url": "flute.jpg"
   },
   {
-    "index": "forgery-kit",
+    "index": "forgerykit",
     "name": "Forgery Kit",
-    "url": "/api/equipment/forgery-kit"
+    "url": "forgerykit.jpg"
   },
   {
     "index": "galley",
     "name": "Galley",
-    "url": "/api/equipment/galley"
+    "url": "galley.jpg"
   },
   {
     "index": "glaive",
     "name": "Glaive",
-    "url": "/api/equipment/glaive"
+    "url": "glaive.jpg"
   },
   {
-    "index": "glassblowers-tools",
+    "index": "glassblowerstools",
     "name": "Glassblower's tools",
-    "url": "/api/equipment/glassblowers-tools"
+    "url": "glassblowerstools.jpg"
   },
   {
-    "index": "grappling-hook",
+    "index": "grapplinghook",
     "name": "Grappling hook",
-    "url": "/api/equipment/grappling-hook"
+    "url": "grapplinghook.jpg"
   },
   {
     "index": "greataxe",
     "name": "Greataxe",
-    "url": "/api/equipment/greataxe"
+    "url": "greataxe.jpg"
   },
   {
     "index": "greatclub",
     "name": "Greatclub",
-    "url": "/api/equipment/greatclub"
+    "url": "greatclub.jpg"
   },
   {
     "index": "greatsword",
     "name": "Greatsword",
-    "url": "/api/equipment/greatsword"
+    "url": "greatsword.jpg"
   },
   {
     "index": "halberd",
     "name": "Halberd",
-    "url": "/api/equipment/halberd"
+    "url": "halberd.jpg"
   },
   {
-    "index": "half-plate",
+    "index": "halfplate",
     "name": "Half Plate",
-    "url": "/api/equipment/half-plate"
+    "url": "halfplate.jpg"
   },
   {
     "index": "hammer",
     "name": "Hammer",
-    "url": "/api/equipment/hammer"
+    "url": "hammer.jpg"
   },
   {
-    "index": "hammer-sledge",
+    "index": "hammersledge",
     "name": "Hammer, sledge",
-    "url": "/api/equipment/hammer-sledge"
+    "url": "hammersledge.jpg"
   },
   {
     "index": "handaxe",
     "name": "Handaxe",
-    "url": "/api/equipment/handaxe"
+    "url": "handaxe.jpg"
   },
   {
-    "index": "healers-kit",
+    "index": "healerskit",
     "name": "Healer's Kit",
-    "url": "/api/equipment/healers-kit"
+    "url": "healerskit.jpg"
   },
   {
-    "index": "herbalism-kit",
+    "index": "herbalismkit",
     "name": "Herbalism Kit",
-    "url": "/api/equipment/herbalism-kit"
+    "url": "herbalismkit.jpg"
   },
   {
     "index": "hide",
     "name": "Hide",
-    "url": "/api/equipment/hide"
+    "url": "hide.jpg"
   },
   {
-    "index": "holy-water-flask",
-    "name": "Holy water (flask)",
-    "url": "/api/equipment/holy-water-flask"
+    "index": "holywater",
+    "name": "Holy water",
+    "url": "holywater.jpg"
   },
   {
     "index": "horn",
     "name": "Horn",
-    "url": "/api/equipment/horn"
+    "url": "horn.jpg"
   },
   {
-    "index": "horse-draft",
+    "index": "horsedraft",
     "name": "Horse, draft",
-    "url": "/api/equipment/horse-draft"
+    "url": "horsedraft.jpg"
   },
   {
-    "index": "horse-riding",
+    "index": "horseriding",
     "name": "Horse, riding",
-    "url": "/api/equipment/horse-riding"
+    "url": "horseriding.jpg"
   },
   {
     "index": "hourglass",
     "name": "Hourglass",
-    "url": "/api/equipment/hourglass"
+    "url": "hourglass.jpg"
   },
   {
-    "index": "hunting-trap",
+    "index": "huntingtrap",
     "name": "Hunting trap",
-    "url": "/api/equipment/hunting-trap"
+    "url": "huntingtrap.jpg"
   },
   {
-    "index": "ink-1-ounce-bottle",
+    "index": "ink1ouncebottle",
     "name": "Ink (1 ounce bottle)",
-    "url": "/api/equipment/ink-1-ounce-bottle"
+    "url": "ink1ouncebottle.jpg"
   },
   {
-    "index": "ink-pen",
+    "index": "inkpen",
     "name": "Ink pen",
-    "url": "/api/equipment/ink-pen"
+    "url": "inkpen.jpg"
   },
   {
     "index": "javelin",
     "name": "Javelin",
-    "url": "/api/equipment/javelin"
+    "url": "javelin.jpg"
   },
   {
-    "index": "jewelers-tools",
+    "index": "jewelerstools",
     "name": "Jeweler's tools",
-    "url": "/api/equipment/jewelers-tools"
+    "url": "jewelerstools.jpg"
   },
   {
-    "index": "jug-or-pitcher",
+    "index": "jugorpitcher",
     "name": "Jug or pitcher",
-    "url": "/api/equipment/jug-or-pitcher"
+    "url": "jugorpitcher.jpg"
   },
   {
     "index": "keelboat",
     "name": "Keelboat",
-    "url": "/api/equipment/keelboat"
+    "url": "keelboat.jpg"
   },
   {
-    "index": "ladder-10-foot",
-    "name": "Ladder (10-foot)",
-    "url": "/api/equipment/ladder-10-foot"
+    "index": "ladder",
+    "name": "Ladder",
+    "url": "ladder.jpg"
   },
   {
     "index": "lamp",
     "name": "Lamp",
-    "url": "/api/equipment/lamp"
+    "url": "lamp.jpg"
   },
   {
     "index": "lance",
     "name": "Lance",
-    "url": "/api/equipment/lance"
+    "url": "lance.jpg"
   },
   {
-    "index": "lantern-bullseye",
+    "index": "lanternbullseye",
     "name": "Lantern, bullseye",
-    "url": "/api/equipment/lantern-bullseye"
+    "url": "lanternbullseye.jpg"
   },
   {
-    "index": "lantern-hooded",
+    "index": "lanternhooded",
     "name": "Lantern, hooded",
-    "url": "/api/equipment/lantern-hooded"
+    "url": "lanternhooded.jpg"
   },
   {
     "index": "leather",
     "name": "Leather",
-    "url": "/api/equipment/leather"
+    "url": "leather.jpg"
   },
   {
-    "index": "leatherworkers-tools",
+    "index": "leatherworkerstools",
     "name": "Leatherworker's tools",
-    "url": "/api/equipment/leatherworkers-tools"
+    "url": "leatherworkerstools.jpg"
   },
   {
-    "index": "light-hammer",
+    "index": "lighthammer",
     "name": "Light hammer",
-    "url": "/api/equipment/light-hammer"
+    "url": "lighthammer.jpg"
   },
   {
     "index": "lock",
     "name": "Lock",
-    "url": "/api/equipment/lock"
+    "url": "lock.jpg"
   },
   {
     "index": "longbow",
     "name": "Longbow",
-    "url": "/api/equipment/longbow"
+    "url": "longbow.jpg"
   },
   {
     "index": "longship",
     "name": "Longship",
-    "url": "/api/equipment/longship"
+    "url": "longship.jpg"
   },
   {
     "index": "longsword",
     "name": "Longsword",
-    "url": "/api/equipment/longsword"
+    "url": "longsword.jpg"
   },
   {
     "index": "lute",
     "name": "Lute",
-    "url": "/api/equipment/lute"
+    "url": "lute.jpg"
   },
   {
     "index": "lyre",
     "name": "Lyre",
-    "url": "/api/equipment/lyre"
+    "url": "lyre.jpg"
   },
   {
     "index": "mace",
     "name": "Mace",
-    "url": "/api/equipment/mace"
+    "url": "mace.jpg"
   },
   {
-    "index": "magnifying-glass",
+    "index": "magnifyingglass",
     "name": "Magnifying glass",
-    "url": "/api/equipment/magnifying-glass"
+    "url": "magnifyingglass.jpg"
   },
   {
     "index": "manacles",
     "name": "Manacles",
-    "url": "/api/equipment/manacles"
+    "url": "manacles.jpg"
   },
   {
-    "index": "masons-tools",
+    "index": "masonstools",
     "name": "Mason's tools",
-    "url": "/api/equipment/masons-tools"
+    "url": "masonstools.jpg"
   },
   {
     "index": "mastiff",
     "name": "Mastiff",
-    "url": "/api/equipment/mastiff"
+    "url": "mastiff.jpg"
   },
   {
     "index": "maul",
     "name": "Maul",
-    "url": "/api/equipment/maul"
+    "url": "maul.jpg"
   },
   {
-    "index": "mess-kit",
+    "index": "messkit",
     "name": "Mess Kit",
-    "url": "/api/equipment/mess-kit"
+    "url": "messkit.jpg"
   },
   {
-    "index": "mirror-steel",
+    "index": "mirrorsteel",
     "name": "Mirror, steel",
-    "url": "/api/equipment/mirror-steel"
+    "url": "mirrorsteel.jpg"
   },
   {
     "index": "morningstar",
     "name": "Morningstar",
-    "url": "/api/equipment/morningstar"
+    "url": "morningstar.jpg"
   },
   {
     "index": "mule",
     "name": "Mule",
-    "url": "/api/equipment/mule"
+    "url": "mule.jpg"
   },
   {
-    "index": "navigators-tools",
+    "index": "navigatorstools",
     "name": "Navigator's tools",
-    "url": "/api/equipment/navigators-tools"
+    "url": "navigatorstools.jpg"
   },
   {
     "index": "net",
     "name": "Net",
-    "url": "/api/equipment/net"
+    "url": "net.jpg"
   },
   {
-    "index": "oil-flask",
-    "name": "Oil (flask)",
-    "url": "/api/equipment/oil-flask"
+    "index": "oil",
+    "name": "Oil",
+    "url": "oil.jpg"
   },
   {
     "index": "orb",
     "name": "Orb",
-    "url": "/api/equipment/orb"
+    "url": "orb.jpg"
   },
   {
     "index": "padded",
     "name": "Padded",
-    "url": "/api/equipment/padded"
+    "url": "padded.jpg"
   },
   {
-    "index": "painters-supplies",
+    "index": "painterssupplies",
     "name": "Painter's supplies",
-    "url": "/api/equipment/painters-supplies"
+    "url": "painterssupplies.jpg"
   },
   {
-    "index": "pan-flute",
+    "index": "panflute",
     "name": "Pan flute",
-    "url": "/api/equipment/pan-flute"
+    "url": "panflute.jpg"
   },
   {
-    "index": "paper-one-sheet",
-    "name": "Paper (one sheet)",
-    "url": "/api/equipment/paper-one-sheet"
+    "index": "paper",
+    "name": "Paper",
+    "url": "paper.jpg"
   },
   {
-    "index": "parchment-one-sheet",
-    "name": "Parchment (one sheet)",
-    "url": "/api/equipment/parchment-one-sheet"
+    "index": "parchment",
+    "name": "Parchment",
+    "url": "parchment.jpg"
   },
   {
-    "index": "perfume-vial",
-    "name": "Perfume (vial)",
-    "url": "/api/equipment/perfume-vial"
+    "index": "perfume",
+    "name": "Perfume",
+    "url": "perfume.jpg"
   },
   {
-    "index": "pick-miners",
+    "index": "pickminers",
     "name": "Pick, miner's",
-    "url": "/api/equipment/pick-miners"
+    "url": "pickminers.jpg"
   },
   {
     "index": "pike",
     "name": "Pike",
-    "url": "/api/equipment/pike"
+    "url": "pike.jpg"
   },
   {
     "index": "piton",
     "name": "Piton",
-    "url": "/api/equipment/piton"
+    "url": "piton.jpg"
   },
   {
     "index": "plate",
     "name": "Plate",
-    "url": "/api/equipment/plate"
+    "url": "plate.jpg"
   },
   {
-    "index": "playing-card-set",
+    "index": "playingcardset",
     "name": "Playing card set",
-    "url": "/api/equipment/playing-card-set"
+    "url": "playingcardset.jpg"
   },
   {
-    "index": "poison-basic-vial",
-    "name": "Poison, basic (vial)",
-    "url": "/api/equipment/poison-basic-vial"
+    "index": "poisonbasic",
+    "name": "Poison, basic",
+    "url": "poisonbasic.jpg"
   },
   {
-    "index": "poisoners-kit",
+    "index": "poisonerskit",
     "name": "Poisoner's Kit",
-    "url": "/api/equipment/poisoners-kit"
+    "url": "poisonerskit.jpg"
   },
   {
-    "index": "pole-10-foot",
-    "name": "Pole (10-foot)",
-    "url": "/api/equipment/pole-10-foot"
+    "index": "pole",
+    "name": "Pole",
+    "url": "pole.jpg"
   },
   {
     "index": "pony",
     "name": "Pony",
-    "url": "/api/equipment/pony"
+    "url": "pony.jpg"
   },
   {
-    "index": "pot-iron",
+    "index": "potiron",
     "name": "Pot, iron",
-    "url": "/api/equipment/pot-iron"
+    "url": "potiron.jpg"
   },
   {
-    "index": "potion-of-healing",
+    "index": "potionofhealing",
     "name": "Potion of healing",
-    "url": "/api/equipment/potion-of-healing"
+    "url": "potionofhealing.jpg"
   },
   {
-    "index": "potters-tools",
+    "index": "potterstools",
     "name": "Potter's tools",
-    "url": "/api/equipment/potters-tools"
+    "url": "potterstools.jpg"
   },
   {
     "index": "pouch",
     "name": "Pouch",
-    "url": "/api/equipment/pouch"
+    "url": "pouch.jpg"
   },
   {
-    "index": "priests-pack",
+    "index": "priestspack",
     "name": "Priest's Pack",
-    "url": "/api/equipment/priests-pack"
+    "url": "priestspack.jpg"
   },
   {
     "index": "quarterstaff",
     "name": "Quarterstaff",
-    "url": "/api/equipment/quarterstaff"
+    "url": "quarterstaff.jpg"
   },
   {
     "index": "quiver",
     "name": "Quiver",
-    "url": "/api/equipment/quiver"
+    "url": "quiver.jpg"
   },
   {
-    "index": "ram-portable",
+    "index": "ramportable",
     "name": "Ram, portable",
-    "url": "/api/equipment/ram-portable"
+    "url": "ramportable.jpg"
   },
   {
     "index": "rapier",
     "name": "Rapier",
-    "url": "/api/equipment/rapier"
+    "url": "rapier.jpg"
   },
   {
-    "index": "rations-1-day",
-    "name": "Rations (1 day)",
-    "url": "/api/equipment/rations-1-day"
+    "index": "ration",
+    "name": "Ration",
+    "url": "ration.jpg"
   },
   {
     "index": "reliquary",
     "name": "Reliquary",
-    "url": "/api/equipment/reliquary"
+    "url": "reliquary.jpg"
   },
   {
     "index": "riding",
     "name": "Riding",
-    "url": "/api/equipment/riding"
+    "url": "riding.jpg"
   },
   {
-    "index": "ring-mail",
+    "index": "ringmail",
     "name": "Ring Mail",
-    "url": "/api/equipment/ring-mail"
+    "url": "ringmail.jpg"
   },
   {
     "index": "robes",
     "name": "Robes",
-    "url": "/api/equipment/robes"
+    "url": "robes.jpg"
   },
   {
     "index": "rod",
     "name": "Rod",
-    "url": "/api/equipment/rod"
+    "url": "rod.jpg"
   },
   {
-    "index": "rope-hempen-50-feet",
-    "name": "Rope, hempen (50 feet)",
-    "url": "/api/equipment/rope-hempen-50-feet"
+    "index": "rope",
+    "name": "Rope, hempen",
+    "url": "rope.jpg"
   },
   {
-    "index": "rope-silk-50-feet",
-    "name": "Rope, silk (50 feet)",
-    "url": "/api/equipment/rope-silk-50-feet"
+    "index": "ropesilk",
+    "name": "Rope, silk",
+    "url": "ropesilk.jpg"
   },
   {
     "index": "rowboat",
     "name": "Rowboat",
-    "url": "/api/equipment/rowboat"
+    "url": "rowboat.jpg"
   },
   {
     "index": "sack",
     "name": "Sack",
-    "url": "/api/equipment/sack"
+    "url": "sack.jpg"
   },
   {
-    "index": "saddle-exotic",
+    "index": "saddleexotic",
     "name": "Saddle, Exotic",
-    "url": "/api/equipment/saddle-exotic"
+    "url": "saddleexotic.jpg"
   },
   {
-    "index": "saddle-military",
+    "index": "saddlemilitary",
     "name": "Saddle, Military",
-    "url": "/api/equipment/saddle-military"
+    "url": "saddlemilitary.jpg"
   },
   {
-    "index": "saddle-pack",
+    "index": "saddlepack",
     "name": "Saddle, Pack",
-    "url": "/api/equipment/saddle-pack"
+    "url": "saddlepack.jpg"
   },
   {
     "index": "saddlebags",
     "name": "Saddlebags",
-    "url": "/api/equipment/saddlebags"
+    "url": "saddlebags.jpg"
   },
   {
-    "index": "sailing-ship",
-    "name": "Sailing ship",
-    "url": "/api/equipment/sailing-ship"
-  },
-  {
-    "index": "scale-mail",
+    "index": "scalemail",
     "name": "Scale Mail",
-    "url": "/api/equipment/scale-mail"
+    "url": "scalemail.jpg"
   },
   {
-    "index": "scale-merchants",
+    "index": "scalemerchants",
     "name": "Scale, merchant's",
-    "url": "/api/equipment/scale-merchants"
+    "url": "scalemerchants.jpg"
   },
   {
-    "index": "scholars-pack",
+    "index": "scholarspack",
     "name": "Scholar's Pack",
-    "url": "/api/equipment/scholars-pack"
+    "url": "scholarspack.jpg"
   },
   {
     "index": "scimitar",
     "name": "Scimitar",
-    "url": "/api/equipment/scimitar"
+    "url": "scimitar.jpg"
   },
   {
-    "index": "sealing-wax",
+    "index": "sealingwax",
     "name": "Sealing wax",
-    "url": "/api/equipment/sealing-wax"
+    "url": "sealingwax.jpg"
   },
   {
     "index": "shawm",
     "name": "Shawm",
-    "url": "/api/equipment/shawm"
+    "url": "shawm.jpg"
   },
   {
     "index": "shield",
     "name": "Shield",
-    "url": "/api/equipment/shield"
+    "url": "shield.jpg"
   },
   {
     "index": "shortbow",
     "name": "Shortbow",
-    "url": "/api/equipment/shortbow"
+    "url": "shortbow.jpg"
   },
   {
     "index": "shortsword",
     "name": "Shortsword",
-    "url": "/api/equipment/shortsword"
+    "url": "shortsword.jpg"
   },
   {
     "index": "shovel",
     "name": "Shovel",
-    "url": "/api/equipment/shovel"
+    "url": "shovel.jpg"
   },
   {
     "index": "sickle",
     "name": "Sickle",
-    "url": "/api/equipment/sickle"
+    "url": "sickle.jpg"
   },
   {
-    "index": "signal-whistle",
+    "index": "signalwhistle",
     "name": "Signal whistle",
-    "url": "/api/equipment/signal-whistle"
+    "url": "signalwhistle.jpg"
   },
   {
-    "index": "signet-ring",
+    "index": "signetring",
     "name": "Signet ring",
-    "url": "/api/equipment/signet-ring"
+    "url": "signetring.jpg"
   },
   {
     "index": "sled",
     "name": "Sled",
-    "url": "/api/equipment/sled"
+    "url": "sled.jpg"
   },
   {
     "index": "sling",
     "name": "Sling",
-    "url": "/api/equipment/sling"
+    "url": "sling.jpg"
   },
   {
-    "index": "sling-bullet",
-    "name": "Sling bullet",
-    "url": "/api/equipment/sling-bullet"
+    "index": "slingbullets",
+    "name": "Sling bullets",
+    "url": "slingbullets.jpg"
   },
   {
-    "index": "smiths-tools",
+    "index": "smithstools",
     "name": "Smith's tools",
-    "url": "/api/equipment/smiths-tools"
+    "url": "smithstools.jpg"
   },
   {
     "index": "soap",
     "name": "Soap",
-    "url": "/api/equipment/soap"
+    "url": "soap.jpg"
   },
   {
     "index": "spear",
     "name": "Spear",
-    "url": "/api/equipment/spear"
+    "url": "spear.jpg"
   },
   {
     "index": "spellbook",
     "name": "Spellbook",
-    "url": "/api/equipment/spellbook"
+    "url": "spellbook.jpg"
   },
   {
-    "index": "spike-iron",
+    "index": "spikeiron",
     "name": "Spike, iron",
-    "url": "/api/equipment/spike-iron"
+    "url": "spikeiron.jpg"
   },
   {
     "index": "splint",
     "name": "Splint",
-    "url": "/api/equipment/splint"
+    "url": "splint.jpg"
   },
   {
-    "index": "sprig-of-mistletoe",
+    "index": "sprigofmistletoe",
     "name": "Sprig of mistletoe",
-    "url": "/api/equipment/sprig-of-mistletoe"
+    "url": "sprigofmistletoe.jpg"
   },
   {
     "index": "spyglass",
     "name": "Spyglass",
-    "url": "/api/equipment/spyglass"
-  },
-  {
-    "index": "stabling-1-day",
-    "name": "Stabling (1 day)",
-    "url": "/api/equipment/stabling-1-day"
+    "url": "spyglass.jpg"
   },
   {
     "index": "staff",
     "name": "Staff",
-    "url": "/api/equipment/staff"
+    "url": "staff.jpg"
   },
   {
-    "index": "studded-leather",
+    "index": "studdedleather",
     "name": "Studded Leather",
-    "url": "/api/equipment/studded-leather"
+    "url": "studdedleather.jpg"
   },
   {
-    "index": "tent-two-person",
-    "name": "Tent, two-person",
-    "url": "/api/equipment/tent-two-person"
+    "index": "tenttwoperson",
+    "name": "Tent, twoperson",
+    "url": "tenttwoperson.jpg"
   },
   {
-    "index": "thieves-tools",
+    "index": "thievestools",
     "name": "Thieves' tools",
-    "url": "/api/equipment/thieves-tools"
+    "url": "thievestools.jpg"
   },
   {
     "index": "tinderbox",
     "name": "Tinderbox",
-    "url": "/api/equipment/tinderbox"
+    "url": "tinderbox.jpg"
   },
   {
-    "index": "tinkers-tools",
+    "index": "tinkerstools",
     "name": "Tinker's tools",
-    "url": "/api/equipment/tinkers-tools"
+    "url": "tinkerstools.jpg"
   },
   {
     "index": "torch",
     "name": "Torch",
-    "url": "/api/equipment/torch"
+    "url": "torch.jpg"
   },
   {
     "index": "totem",
     "name": "Totem",
-    "url": "/api/equipment/totem"
+    "url": "totem.jpg"
   },
   {
     "index": "trident",
     "name": "Trident",
-    "url": "/api/equipment/trident"
+    "url": "trident.jpg"
   },
   {
     "index": "vial",
     "name": "Vial",
-    "url": "/api/equipment/vial"
+    "url": "vial.jpg"
   },
   {
     "index": "viol",
     "name": "Viol",
-    "url": "/api/equipment/viol"
+    "url": "viol.jpg"
   },
   {
     "index": "wagon",
     "name": "Wagon",
-    "url": "/api/equipment/wagon"
+    "url": "wagon.jpg"
   },
   {
     "index": "wand",
     "name": "Wand",
-    "url": "/api/equipment/wand"
+    "url": "wand.jpg"
   },
   {
-    "index": "war-pick",
+    "index": "warpick",
     "name": "War pick",
-    "url": "/api/equipment/war-pick"
+    "url": "warpick.jpg"
   },
   {
     "index": "warhammer",
     "name": "Warhammer",
-    "url": "/api/equipment/warhammer"
+    "url": "warhammer.jpg"
   },
   {
     "index": "warhorse",
     "name": "Warhorse",
-    "url": "/api/equipment/warhorse"
+    "url": "warhorse.jpg"
   },
   {
     "index": "warship",
     "name": "Warship",
-    "url": "/api/equipment/warship"
+    "url": "warship.jpg"
   },
   {
     "index": "waterskin",
     "name": "Waterskin",
-    "url": "/api/equipment/waterskin"
+    "url": "waterskin.jpg"
   },
   {
-    "index": "weavers-tools",
+    "index": "weaverstools",
     "name": "Weaver's tools",
-    "url": "/api/equipment/weavers-tools"
+    "url": "weaverstools.jpg"
   },
   {
     "index": "whetstone",
     "name": "Whetstone",
-    "url": "/api/equipment/whetstone"
+    "url": "whetstone.jpg"
   },
   {
     "index": "whip",
     "name": "Whip",
-    "url": "/api/equipment/whip"
+    "url": "whip.jpg"
   },
   {
-    "index": "woodcarvers-tools",
+    "index": "woodcarverstools",
     "name": "Woodcarver's tools",
-    "url": "/api/equipment/woodcarvers-tools"
+    "url": "woodcarverstools.jpg"
   },
   {
-    "index": "wooden-staff",
+    "index": "woodenstaff",
     "name": "Wooden staff",
-    "url": "/api/equipment/wooden-staff"
+    "url": "woodenstaff.jpg"
   },
   {
-    "index": "yew-wand",
+    "index": "yewwand",
     "name": "Yew wand",
-    "url": "/api/equipment/yew-wand"
+    "url": "yewwand.jpg"
   }
 ].each do |item| 
-  BaseItem.create(name: item[:name])
+  BaseItem.create(name: item[:name], image: item[:url]  )
 end

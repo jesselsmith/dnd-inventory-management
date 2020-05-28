@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {fetchCharacters} from '../../actions/characterActions'
+import NewCharacterForm from './newCharacterForm'
 
 class CharacterList extends Component {
+  state = {
+    showNewCharacterForm: false
+  }
+
   displayCharacterList = () => {
     if (this.props.loading) {
       return <h2>Characters loading...</h2>
@@ -14,17 +19,34 @@ class CharacterList extends Component {
             <Link to={`/characters/${character.id}`}>
                 <button>{character.attributes.name} Strength: {character.attributes.strength} Encumberance: {character.attributes.encumberance}</button>
             </Link>
-            </li>
+          </li>
         )
       })
     }
   }
 
+  handleNewCharacter = () => {
+    this.setState({
+      showNewCharacterForm: true
+    })
+  }
+
+  showButtonOrForm = () => {
+    if(this.state.showNewCharacterForm){
+      return <NewCharacterForm />
+    }else{
+      return <button onClick={this.handleNewCharacter}>Add New Character</button>
+    }
+  }
+
   render(){
     return(
-      <ul>
-        {this.displayCharacterList()}
-      </ul>
+      <>
+        <ul>
+          {this.displayCharacterList()}
+        </ul>
+        {this.showButtonOrForm()}
+      </>
     )
   }
 }

@@ -33,7 +33,7 @@ class CharacterList extends Component {
 
   showButtonOrForm = () => {
     if(this.state.showNewCharacterForm){
-      return <NewCharacterForm />
+      return <NewCharacterForm closeForm={() => {this.setState({showNewCharacterForm: false})}} />
     }else{
       return <button onClick={this.handleNewCharacter}>Add New Character</button>
     }

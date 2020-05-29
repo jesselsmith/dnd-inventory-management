@@ -17,6 +17,7 @@ class NewCharacterForm extends Component {
         }
       }
       )
+    this.props.closeForm()
   }
 
   handleChange = e => {

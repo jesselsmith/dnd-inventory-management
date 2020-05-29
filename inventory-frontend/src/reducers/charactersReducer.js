@@ -17,7 +17,7 @@ export default (state = { characters: [], activeCharacter: null, loadingCharacte
         activeCharacter: null
       }
     case 'ADD_CHARACTER':
-      return { ...state, encounters: [...state.characters, action.character], loadingCharacters: false }
+      return { ...state, characters: [...state.characters, action.character], loadingCharacters: false }
     case 'LOADING_CHARACTERS':
       return {...state, loadingCharacters: true }
     case 'UPDATE_CHARACTER':

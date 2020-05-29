@@ -7,6 +7,7 @@ import { fetchOwnedItems} from '../../actions/ownedItemActions'
 import { setActiveCharacter } from '../../actions/characterActions'
 import BaseItemSidebar from '../item/baseItem/baseItemSidebar'
 import { fetchContainers } from '../../actions/containerActions'
+import { Link } from 'react-router-dom'
 
 class CharacterPage extends Component {
   getCharacter = () => { 
@@ -34,6 +35,7 @@ class CharacterPage extends Component {
       if(this.props.showItemList){
         return(
           <>
+            <Link to="/">Back to Characters</Link>
             <div className="main margin">
               <CharacterInfo character={character} />
               <CharacterInventory character={character} />
@@ -44,6 +46,7 @@ class CharacterPage extends Component {
       }else{
         return(
           <>
+            <Link to="/">Back to Characters</Link>
             <div className="main no-margin">
               <CharacterInfo character={character} />
               <CharacterInventory character={character} />

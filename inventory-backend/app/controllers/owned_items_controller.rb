@@ -33,7 +33,7 @@ class OwnedItemsController < ApplicationController
   private
 
   def owned_item_params(params)
-    params.require(:owned_item).permit(:notches, :character_id, :base_item_id)
+    params.require(:owned_item).permit(:notches, :character_id, :base_item_id, :hasCharges, :charges)
   end
 
   def render_owned_item

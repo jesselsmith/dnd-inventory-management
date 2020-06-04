@@ -23,19 +23,19 @@ class OwnedItem extends Component {
     })
   }
 
-  showNotches = () => {
+  showItemCounter = counterType => {
     let item = this.getItem()
-    if(this.state.showNotches){
+    if(this.state.showNotches && (counterType === "Notches" || item.attributes.hasCharges)){
       return (
-        <div className="item-buttons" >
-          <div className="notches">
-            <span className="notch-text">Notches: {item.attributes.notches}</span>
-            <span className="notch-btns">
+        <div className={`item-buttons ${counterType.toLowerCase()}`}>
+          <div className="item-counter">
+              <span className="item-counter-text">{counterType}: {(counterType === "Notches" ? item.attributes.notches : item.attributes.charges)}</span>
+              <span className="item-counter-btns">
               <button className="plus" key="1" onClick={this.handleNotchIncrease}>+</button>
               <button className="minus" key='2' onClick={this.handleNotchDecrease}>-</button>
             </span>
           </div>
-        </div>
+      </div>
       )
     }
   }
@@ -76,7 +76,8 @@ class OwnedItem extends Component {
     return(
       <div className="owned-item" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         {this.displayImageOrName()}
-        {this.showNotches()}
+        {this.showItemCounter("Charges")}
+        {this.showItemCounter("Notches")}
       </div>
     )  
   }

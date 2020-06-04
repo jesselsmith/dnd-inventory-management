@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_20_224041) do
+ActiveRecord::Schema.define(version: 2020_06_03_223114) do
 
   create_table "base_items", force: :cascade do |t|
     t.string "name", null: false
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_05_20_224041) do
     t.integer "contained_slots", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "hasCharges", default: false, null: false
+    t.integer "charges", default: 0, null: false
   end
 
   create_table "characters", force: :cascade do |t|
@@ -44,6 +46,8 @@ ActiveRecord::Schema.define(version: 2020_05_20_224041) do
     t.integer "notches", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "charges", default: 0, null: false
+    t.boolean "hasCharges", default: false, null: false
     t.index ["base_item_id"], name: "index_owned_items_on_base_item_id"
     t.index ["character_id"], name: "index_owned_items_on_character_id"
   end

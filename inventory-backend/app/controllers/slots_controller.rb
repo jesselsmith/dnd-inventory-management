@@ -11,7 +11,13 @@ class SlotsController < ApplicationController
     parameters = slot_params(params)
 
     if( !parameters[:owned_item_id] && parameters[:base_item_id] )
-      item = OwnedItem.new(character_id: parameters[:character_id], base_item_id: parameters[:base_item_id])
+      base_item = BaseItem.find(parameters[:base_item_id])
+      item = OwnedItem.new(
+        character_id: parameters[:character_id],
+        base_item_id: parameters[:base_item_id],
+        hasCharges: base_item.hasCharges,
+        charges: base_item.charges
+      )
       if item.save
         parameters[:owned_item_id] = item.id
       end

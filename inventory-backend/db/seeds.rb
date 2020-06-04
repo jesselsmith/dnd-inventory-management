@@ -1154,3 +1154,104 @@
 ].each do |item| 
   BaseItem.create(name: item[:name], image: item[:url]  )
 end
+
+[
+  {
+    name: "Carpenter's tools",
+    charges: 5
+  },
+  {
+    name: "Woodcarver's tools",
+    charges: 5
+  },
+  {
+    name: "Weaver's tools",
+    charges: 5 
+  },
+  {
+    name: "Tinker's tools",
+    charges: 5 
+  },
+  {
+    name: "Thieves' tools",
+    charges: 5 
+  },
+  {
+    name: "Smith's tools",
+    charges: 5 
+  },
+  {
+    name: "Potter's tools",
+    charges: 5 
+  },
+  {
+    name: "Navigator's tools",
+    charges: 5 
+  },
+  {
+    name: "Cartographer's tools",
+    charges: 5 
+  },
+  {
+    name: "Cobbler's tools",
+    charges: 5 
+  },
+  {
+    name: "Glassblower's tools",
+    charges: 5 
+  },
+  {
+    name: "Jeweler's tools",
+    charges: 5 
+  },
+  {
+    name: "Leatherworker's tools",
+    charges: 5 
+  },
+  {
+    name: "Mason's tools",
+    charges: 5 
+  },
+  {
+    name: "Climber's Kit",
+    charges: 5 
+  },
+  {
+    name: "Disguise Kit",
+    charges: 5 
+  },
+  {
+    name: "Forgery Kit",
+    charges: 5 
+  },
+  {
+    name: "Healer's Kit",
+    charges: 10
+  },
+  {
+    name: "Herbalism Kit",
+    charges: 5
+  },
+  {
+    name: "Poisoner's Kit",
+    charges: 5 
+  },
+  {
+    name: "Painter's supplies",
+    charges: 5
+  },
+  {
+    name: "Alchemist's supplies",
+    charges: 5
+  },
+  {
+    name: "Brewer's supplies",
+    charges: 5
+  },
+  {
+    name: "Calligrapher's supplies",
+    charges: 5
+  }
+].each do |item|
+  BaseItem.find_by(name: item[:name]).update(hasCharges: true, charges: item[:charges])
+end

@@ -31,8 +31,8 @@ class OwnedItem extends Component {
           <div className="item-counter">
               <span className="item-counter-text">{counterType}: {(counterType === "Notches" ? item.attributes.notches : item.attributes.charges)}</span>
               <span className="item-counter-btns">
-              <button className="plus" key="1" onClick={this.handleNotchIncrease}>+</button>
-              <button className="minus" key='2' onClick={this.handleNotchDecrease}>-</button>
+              <button className={`${counterType.toLowerCase()} plus`} key="1" onClick={this.handleCounterIncrease}>+</button>
+              <button className={`${counterType.toLowerCase()} minus`} key='2' onClick={this.handleCounterDecrease}>-</button>
             </span>
           </div>
       </div>
@@ -40,20 +40,26 @@ class OwnedItem extends Component {
     }
   }
 
-  handleNotchIncrease = () => {
+  handleCounterIncrease = event => {
     let item = this.getItem()
-    this.props.patchOwnedItem({
-      id: this.props.itemId,
-      notches: item.attributes.notches + 1
-    })
+    let patchOptions = { id: this.props.itemId }
+    if(event.target.classList.contains("notches")){
+      patchOptions["notches"] = item.attributes.notches + 1 
+    } else{
+      patchOptions["charges"] = item.attributes.charges + 1
+    }
+    this.props.patchOwnedItem(patchOptions)
   }
 
-  handleNotchDecrease = () => {
+  handleCounterDecrease = event => {
     let item = this.getItem()
-    this.props.patchOwnedItem({
-      id: this.props.itemId,
-      notches: item.attributes.notches - 1
-    })
+    let patchOptions = { id: this.props.itemId }
+    if(event.target.classList.contains("notches")){
+      patchOptions["notches"] = item.attributes.notches - 1 
+    } else{
+      patchOptions["charges"] = item.attributes.charges - 1
+    }
+    this.props.patchOwnedItem(patchOptions)
   }
 
   displayImageOrName = () => {

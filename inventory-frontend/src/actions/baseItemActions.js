@@ -1,9 +1,15 @@
 const BASE_URL = 'http://localhost:3001/'
 
-export const fetchBaseItems = characterId => {
+const queryString = require('querystring')
+
+export const fetchBaseItems = (searchHash = null ) => {
+  let url = BASE_URL + 'base_items'
+  if(searchHash !== null){
+    url += '?' + queryString.stringify(searchHash)
+  }
   return (dispatch) => {
     dispatch({ type: 'LOADING_BASE_ITEMS' })
-    fetch(`${BASE_URL}base_items`).then(resp => resp.json())
+    fetch(url).then(resp => resp.json())
       .then(json => {
         dispatch({ type: 'SET_BASE_ITEMS', baseItems: json.data })
       })
@@ -49,7 +55,9 @@ export const showItemList = () => {
 export const hideItemList = () => {
   return dispatch => {
     dispatch({ type: 'HIDE_ITEM_LIST' })
+    dispatch({ type: 'CLEAR_SELECTED_ITEM' })
     dispatch({ type: 'CLEAR_SELECTED_SLOT' })
+    fetchBaseItems()(dispatch)
   }
 }
 

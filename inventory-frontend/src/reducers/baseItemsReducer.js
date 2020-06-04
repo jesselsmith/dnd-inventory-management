@@ -12,6 +12,7 @@ export default (state = { baseItems: [], loadingBaseItems: true, showItemList: f
   switch (action.type) {
     case 'SET_BASE_ITEMS':
       return {
+        ...state,
         baseItems: action.baseItems,
         loadingBaseItems: false
       }

@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_06_03_223114) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "base_items", force: :cascade do |t|
     t.string "name", null: false
     t.string "category", default: "Adventuring Gear", null: false

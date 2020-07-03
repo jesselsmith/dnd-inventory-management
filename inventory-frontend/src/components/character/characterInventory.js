@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import WornInventory from '../slot/wornInventory'
 import CarriedInventory from '../slot/carriedInventory'
-import ContainerInventory from '../slot/containerInventory'
+import ContainerList from '../container/containerList'
 
 class CharacterInventory extends Component {
   render(){
@@ -18,7 +18,8 @@ class CharacterInventory extends Component {
           <CarriedInventory encumbered={this.props.character.attributes.encumbered_limit} 
             heavilyEncumbered={this.props.character.attributes.heavily_encumbered_limit} 
             maxSlots={this.props.character.attributes.max_slots} />
-          <ContainerInventory />
+           <h4>Container Inventory</h4>
+           <ContainerList />
         </>
       )
     }

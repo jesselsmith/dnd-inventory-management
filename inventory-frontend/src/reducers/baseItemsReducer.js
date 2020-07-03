@@ -17,7 +17,7 @@ export default (state = { baseItems: [], loadingBaseItems: true, showItemList: f
         loadingBaseItems: false
       }
     case 'ADD_BASE_ITEM':
-      return { ...state, encounters: [...state.baseItems, action.baseItem], loadingBaseItems: false }
+      return { ...state, baseItems: [...state.baseItems, action.baseItem], loadingBaseItems: false }
     case 'LOADING_BASE_ITEMS':
       return {...state, loadingBaseItems: true }
     case 'UPDATE_BASE_ITEM':

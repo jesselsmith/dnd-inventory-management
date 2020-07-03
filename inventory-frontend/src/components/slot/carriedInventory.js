@@ -15,6 +15,12 @@ const carriedInventory = props => {
         heavilyEncumbered={props.heavilyEncumbered}
         slotType="carried"
       />
+      <h4>Light Items</h4>
+      <SlotList
+        slots={props.slots.filter(slot => slot.attributes.kind === "light")}
+        numSlots={4}
+        slotType="light"
+      />
     </div>
   )
 }

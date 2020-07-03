@@ -12,7 +12,15 @@ class Slot extends Component {
     showAdd: false,
     showChargeButtons: false,
     showSelected: false,
+    showNeed14Strength: false,
+    showNeed18Strength: false,
     hovered: "no"
+  }
+
+  strength = () => {
+    return this.props.characters.find(character => {
+      return character.id === this.props.characterId
+    }).attributes.strength
   }
   
   handleMouseEnter = event => {
@@ -22,9 +30,19 @@ class Slot extends Component {
         hovered: "hovered"
       })
     }else{
-      this.setState({
-        showAdd: true
-      })
+      if(this.props.slotName === "Bandolier 3" && this.strength() < 14){
+        this.setState({
+          showNeed14Strength: true
+        })
+      }else if(this.props.slotName === "Bandolier 4" && this.strength() < 18){
+        this.setState({
+          showNeed18Strength: true
+        })
+      }else{
+        this.setState({
+          showAdd: true
+        })
+      }
     }
     
   }
@@ -32,7 +50,9 @@ class Slot extends Component {
   handleMouseLeave = event => {
     this.setState({
       showRemove: false,
-      showAdd: false
+      showAdd: false,
+      showNeed14Strength: false,
+      showNeed18Strength: false
     })
     if(this.state.hovered === "hovered"){
       this.setState({
@@ -93,11 +113,39 @@ class Slot extends Component {
     return Boolean(this.props.slot) && Boolean(this.getItem())
   }
 
+  showNoItem = () => {
+    if(this.state.showNeed14Strength){
+      return(
+        <>
+          <div>
+            {this.props.slotName}
+          </div>
+          <div className="higher-strength">
+            14 STRENGTH REQUIRED TO USE THIS SLOT
+          </div>
+        </>
+      )
+    }else if(this.state.showNeed18Strength){
+      return(
+        <>
+          <div>
+            {this.props.slotName}
+          </div>
+          <div className="higher-strength">
+            18 STRENGTH REQUIRED TO USE THIS SLOT
+          </div>
+        </>
+      )
+    }else{
+      return this.props.slotName
+    }
+  }
+
   showItem = () => {
     if(this.isItemInSlot()){
       return <OwnedItem itemId={this.props.slot.relationships.owned_item.data.id} />
     }else{
-      return this.props.slotName
+      return this.showNoItem()
     }
   }
 
@@ -115,6 +163,7 @@ class Slot extends Component {
 }
 
 const mapStateToProps = state => ({
+  characters: state.characters.characters,
   characterId: state.characters.activeCharacter,
   selectedSlot: state.slots.selectedSlot,
   ownedItems: state.ownedItems.ownedItems

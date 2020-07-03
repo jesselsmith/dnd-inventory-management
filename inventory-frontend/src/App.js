@@ -22,6 +22,7 @@ class App extends Component {
       <Router>
         <>
           <Route exact path="/">
+            <h2>Characters</h2>
             <CharacterList />
           </Route>
           <Route path="/characters/:characterId" render={routerProps => <CharacterPage {...routerProps} />} />

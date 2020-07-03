@@ -18,6 +18,7 @@ class AddContainerForm extends Component {
         }
       }
       )
+    this.props.closeForm()
   }
 
   handleChange = e => {

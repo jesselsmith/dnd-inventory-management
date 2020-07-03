@@ -15,7 +15,7 @@ class SlotsController < ApplicationController
       item = OwnedItem.new(
         character_id: parameters[:character_id],
         base_item_id: parameters[:base_item_id],
-        hasCharges: base_item.hasCharges,
+        has_charges: base_item.has_charges,
         charges: base_item.charges
       )
       if item.save

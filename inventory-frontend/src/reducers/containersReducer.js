@@ -8,7 +8,7 @@ const updateModel = (modelArray, updatedModel) => {
   })
 }
 
-export default (state = { containers: [], loadingcontainers: true }, action) => {
+export default (state = { containers: [], loadingContainers: true }, action) => {
   switch (action.type) {
     case 'SET_CONTAINERS':
       return {
@@ -16,16 +16,16 @@ export default (state = { containers: [], loadingcontainers: true }, action) => 
         loadingcontainers: false
       }
     case 'ADD_CONTAINER':
-      return { ...state, encounters: [...state.containers, action.container], loadingcontainers: false }
+      return { ...state, containers: [...state.containers, action.container], loadingContainers: false }
     case 'LOADING_CONTAINERS':
       return {...state, loadingcontainers: true }
     case 'UPDATE_CONTAINER':
-      return {...state, containers: updateModel(state.containers, action.container), loadingcontainers: false}
+      return {...state, containers: updateModel(state.containers, action.container), loadingContainers: false}
     case 'REMOVE_CONTAINER':
       return {
         ...state,
         containers: state.containers.filter(container => container.id !== action.containerId),
-        loadingcontainers: false
+        loadingContainers: false
       }
     default:
       return state

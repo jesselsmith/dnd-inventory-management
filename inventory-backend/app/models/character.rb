@@ -3,6 +3,10 @@ class Character < ApplicationRecord
   has_many :slots, dependent: :destroy
   has_many :containers, dependent: :destroy
 
+  validates :name, presence: true
+  validates :strength, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 30 }
+
+
   def max_slots
     [self.strength*2, 9].max
   end

@@ -25,7 +25,7 @@ class OwnedItem extends Component {
 
   showItemCounter = counterType => {
     let item = this.getItem()
-    if(this.state.showNotches && (counterType === "Notches" || item.attributes.hasCharges)){
+    if(this.state.showNotches && (counterType === "Notches" || item.attributes.has_charges)){
       return (
         <div className={`item-buttons ${counterType.toLowerCase()}`}>
           <div className="item-counter">
@@ -74,7 +74,7 @@ class OwnedItem extends Component {
     if(baseItem.image && imagePath){
       return <img className="item-img" src={require(`../../../../images/${baseItem.image}`)} alt={baseItem.name} />
     }else{
-      return <h3 className="item-title">Name: {baseItem.name} </h3>
+      return <h3 className="item-title">{baseItem.name} </h3>
     }
   }
 

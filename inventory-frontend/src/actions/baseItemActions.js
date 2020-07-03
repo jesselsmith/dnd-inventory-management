@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001/'
+const BASE_URL = process.env.REACT_APP_BACKEND
 
 const queryString = require('querystring')
 
@@ -29,6 +29,7 @@ const optionMaker = (model, method = 'POST') => {
 
 export const postBaseItem = baseItem => {
   return (dispatch) => {
+    debugger
     dispatch({ type: 'LOADING_BASE_ITEMS' })
     fetch(BASE_URL + 'base_items', optionMaker(baseItem)).then(resp => resp.json())
       .then(json => {

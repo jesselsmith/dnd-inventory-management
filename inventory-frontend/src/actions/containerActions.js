@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3001/'
+const BASE_URL = process.env.REACT_APP_BACKEND
 
 export const fetchContainers = characterId => {
   return (dispatch) => {
@@ -47,9 +47,9 @@ const DELETE_OPTIONS = {
   }
 }
 
-export const deleteContainer = container => {
+export const deleteContainer = containerId => {
   return dispatch => {
-    fetch(`${BASE_URL}containers/${container.id}`, DELETE_OPTIONS).then(resp=> resp.json())
+    fetch(`${BASE_URL}containers/${containerId}`, DELETE_OPTIONS).then(resp=> resp.json())
     .then(json => {
       dispatch({type: 'REMOVE_CONTAINER', containerId: json.data.id})
     })
